@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Landing Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <section id="header"></section>
+    <section id="hero"></section>
+    <section id="about"></section>
+    <section id="services"></section>
+    <footer id="footer"></footer>
+
+    <script>
+        $(document).ready(function() {
+            $("#header").load("header.html");
+            $("#hero").load("hero-section.html");
+            $("#about").load("section-about.html");
+            $("#services").load("section-process.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <!-- Importação do AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

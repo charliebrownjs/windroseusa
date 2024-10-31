@@ -10686,6 +10686,7 @@ figcaption {
     border-bottom: 1px solid var(--neutral--300);
     background-color: var(--neutral--100);
     padding: 24px;
+    display: none;
   }
 
   .header-nav-menu-list {
@@ -10771,9 +10772,9 @@ figcaption {
     bottom: 57px;
   }
 
-  .header-top-wrapper {
+  /* .header-top-wrapper {
     display: none;
-  }
+  } */
 
   .flex-vertical.center.service-single-description---inside---3-post-item {
     text-align: left;
@@ -13507,6 +13508,12 @@ figcaption {
   .update-password-form-block {
     min-height: 415px;
   }
+}
+
+@media screen and (max-width: 655px) {
+  .tablet_view {
+    display: none;
+  } 
 }
 
 @media screen and (max-width: 479px) {

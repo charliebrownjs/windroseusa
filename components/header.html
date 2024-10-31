@@ -1,18 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Header</title>
     <!-- Importação do Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <link rel="stylesheet" href="/components/styles.css" />
+  </head>
 
-<body>
-    <!-- Início do cabeçalho principal -->
-    <!-- Fim do cabeçalho principal -->
+  <body>
+    <div class="header-wrapper header-top w-nav">
+      <div class="container-default w-container">
+        <div class="header-top-wrapper">
+          <div class="flex-horizontal space-between gap-16px">
+            <div class="header-contact-info">
+              <a
+                href="mailto:help@windroseusa.com"
+                class="link color-neutral-600 center w-inline-block"
+                ><div class="inline-block mg-right-8px">
+                  <div class="handyman-icon-font color-accent-1">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      ></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <div class="inline-block">help@WindroseUSA.com</div></a
+              >
+              <div class="color-neutral-600 tablet_view">
+                <div class="inline-block mg-right-8px">
+                  <div class="line-rounded-icon font-size-20px color-accent-1">
+                    
+                  </div>
+                </div>
+                <div class="inline-block">
+                  S Andrews Ave, Fort Lauderdale, FL
+                </div>
+              </div>
+            </div>
+            <div class="w-layout-hflex social-media-flex">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="social-icon-square w-inline-block"
+                ><div class="social-icon-font"></div></a
+              ><a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-icon-square w-inline-block"
+                ><div class="social-icon-font"></div></a
+              >
+            </div>
+          </div>
+        </div>
 
-</body>
-
+        <div class="header-content-wrapper header-top">
+          <div class="header-left-side flex-growth-tablet">
+            <a
+              href="/"
+              aria-current="page"
+              class="header-logo-link w-nav-brand w--current"
+              aria-label="home"
+              ><img
+                src="/assets/WindroseUSA_logo_original.png"
+                alt="Logo - WindroseUSA"
+                class="header-logo"
+            /></a>
+            <nav role="navigation" class="header-nav-menu-wrapper w-nav-menu">
+              <ul role="list" class="header-nav-menu-list tablet_view">
+                <li class="header-nav-list-item">
+                  <a
+                    href="/home-pages/home-v1"
+                    class="header-nav-link w-nav-link"
+                    style="max-width: 1268px"
+                    >Home</a
+                  >
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    href="/about"
+                    class="header-nav-link w-nav-link"
+                    style="max-width: 1268px"
+                    >About</a
+                  >
+                </li>
+                <li class="header-nav-list-item">
+                  <a
+                    href="/services"
+                    class="header-nav-link w-nav-link"
+                    style="max-width: 1268px"
+                    >Services</a
+                  >
+                </li>
+                <li class="header-nav-list-item show-in-tablet header-btn">
+                  <a
+                    href="/contact-pages/contact-v1"
+                    class="btn-primary small width-100 w-button"
+                    >Book Online<span class="line-rounded-icon link-icon-right"
+                      ></span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="mg-left-auto-tablet"></div>
+          </div>
+          <div class="header-right-side">
+            <div class="tablet_view">
+              <a
+                href="tel:(508)818-7518"
+                class="link color-secondary-1 text-bold w-inline-block"
+                ><div class="inline-block mg-right-8px text-regular">
+                  <div
+                    class="line-rounded-icon font-size-24px color-secondary-1"
+                  >
+                    
+                  </div>
+                </div>
+                <div class="inline-block"><div>(508) 818-7518</div></div></a
+              >
+            </div>
+            <div
+              class="hamburger-menu-wrapper w-nav-button"
+              style="-webkit-user-select: text"
+              aria-label="menu"
+              role="button"
+              tabindex="0"
+              aria-controls="w-nav-overlay-0"
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
+              <div
+                class="hamburger-menu-bar top"
+                style="
+                  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                  transform-style: preserve-3d;
+                "
+              ></div>
+              <div
+                class="hamburger-menu-bar bottom"
+                style="
+                  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                  transform-style: preserve-3d;
+                "
+              ></div>
+            </div>
+            <div>
+              <div class="mg-left-24px">
+                <a
+                  href="/contact-pages/contact-v1"
+                  class="btn-primary small w-button"
+                  >Book Online<span
+                    class="line-rounded-icon link-icon-right"
+                    style="
+                      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                        skew(0deg, 0deg);
+                      transform-style: preserve-3d;
+                    "
+                    ></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-nav-overlay" data-wf-ignore=""></div>
+    </div>
+  </body>
 </html>
