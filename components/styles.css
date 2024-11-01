@@ -2098,8 +2098,8 @@ textarea.w-input, textarea.w-select {
 :root {
   --neutral--600: #586272;
   --neutral--800: #161c24;
-  --secondary--color-2: #57aef4;
-  --secondary--color-3: #e9f4ff;
+  --secondary--color-2: #888abc;
+  --secondary--color-3: #F2F2F2;
   --neutral--400: #d9dce2;
   --general--shadow-01: rgba(22, 28, 36, .06);
   --neutral--300: #eceff3;
