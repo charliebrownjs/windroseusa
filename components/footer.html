@@ -7,6 +7,8 @@
     <title>Footer Component</title>
     <link rel="stylesheet" href="/components/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,9 +16,9 @@
     <div class="w-full min-h-screen pb-22"> <!-- page wrapper -->
         <div class="footer-container">
             <footer class="footer-wrapper">
-                <div class="cta-footer-wrapper">
-                    <div class="cta-footer"
-                        style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+                <div  class="cta-footer-wrapper">
+                    <div data-aos="fade-up" class="cta-footer"
+                        >
                         <div class="w-layout-grid grid-2-columns cta-footer-grid-2-col">
                             <div class="inner-container _468px _100-tablet">
                                 <div class="inner-container _350px---mbl center">
@@ -25,7 +27,7 @@
                                 </div>
                             </div>
                             <div class="buttons-row right center---tablet"
-                                style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+                                >
                                 <a href="#" class="btn-primary black button-row w-button">Book Online<span
                                         class="line-rounded-icon link-icon-right" style="">&#x25B6;</span></a><a
                                     href="#" class="btn-secondary w-button">More about us</a>
@@ -42,7 +44,7 @@
                             <div class="mg-bottom-54px">
                                 <div class="w-layout-grid grid-3-columns menu-grid-3-col-wrapper">
                                     <div class="inner-container _356px _100-tablet"
-                                        style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+                                        >
                                         <div class="inline-block mg-bottom-24px">
                                             <div class="heading-h3-size color-secondary-3">Menu</div>
                                         </div>
@@ -67,7 +69,7 @@
                                     </div>
                                     <div>
                                         <div class="inner-container _200px _100-mbp"
-                                            style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+                                            >
                                             <div class="inline-block mg-bottom-24px">
                                                 <div class="heading-h3-size color-secondary-3">Services</div>
                                             </div>
@@ -99,7 +101,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
+                                        >
                                         <div class="inline-block mg-bottom-24px">
                                             <div class="heading-h3-size color-secondary-3">Contact Us</div>
                                         </div>
@@ -138,6 +140,11 @@
             </footer>
         </div>
     </div> <!-- End Footer -->
+    <!-- Importação do AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
