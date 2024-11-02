@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Section Services01</title>
     <link rel="stylesheet" href="/components/styles.css" />
+    <style>
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+      }
+
+      .pulse-animation {
+        animation: pulse 0.5s ease-in-out;
+        animation-iteration-count: 1;
+      }
+    </style>
   </head>
   <body>
     <section class="section pd-0px">
@@ -49,168 +61,67 @@
             >
               <div class="container-default" role="tablist">
                 <a
-                  data-w-tab="Electrical repairs"
+                  id="furniture-assembly-button"
                   class="tab-left-icon w-inline-block w-tab-link w--current"
-                  href="#w-tabs-0-data-w-pane-0"
+                  href="#"
                   role="tab"
                   aria-controls="w-tabs-0-data-w-pane-0"
                   aria-selected="true"
                 >
                   <div class="mg-right-16px">
                     <div class="flex-vertical center">
+                      <!-- Carrega a imagem estática inicialmente -->
                       <img
-                        alt="Electrical Repairs Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f985045c7ef1faff2b7_electrical-repairs-icon-handyman-x-webflow-template.svg"
+                        id="furniture-assembly-icon"
+                        alt="Furniture Assembly Icon"
+                        src="/assets/gif/furniture-static.png" 
                         class="image-size"
+                        width="40px"
                       />
                     </div>
                   </div>
-                  <div>Electrical repairs</div> </a
-                ><a
-                  data-w-tab="Lighting installation"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-1"
-                  href="#w-tabs-0-data-w-pane-1"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-1"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Lighting Installation Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f92139aedee1c7f20bb_lighting-installation-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>Lighting installation</div> </a
-                ><a
-                  data-w-tab="Electrical maintenance"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-2"
-                  href="#w-tabs-0-data-w-pane-2"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-2"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Electrical Maintenance Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f967457503c5bd8dfb5_electrical-maintenance-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>Electrical maintenance</div> </a
-                ><a
-                  data-w-tab="Wiring and rewiring"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-3"
-                  href="#w-tabs-0-data-w-pane-3"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-3"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Wiring And Rewiring Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f9420b5be3fa2d403d1_wiring-and-rewiring-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>Wiring and rewiring</div> </a
-                ><a
-                  data-w-tab="Safety inspections"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-4"
-                  href="#w-tabs-0-data-w-pane-4"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-4"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Safety Inspections Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f92327e8b6c0422ec45_safety-inspections-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>Safety inspections</div> </a
-                ><a
-                  data-w-tab="Home automation"
-                  class="tab-left-icon last w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-5"
-                  href="#w-tabs-0-data-w-pane-5"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-5"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Home Automation Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f92b7840d452f60f6de_home-automation-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div>Home automation</div>
+                  <div>Furniture Assembly</div>
                 </a>
-              </div>
-            </div>
-            <div class="mg-top-40px">
-              <div class="w-layout-hflex flex-horizontal">
-                <a href="/services" class="btn-primary w-button"
-                  >Our services<span class="line-rounded-icon link-icon-right"
-                    ></span
-                  ></a
-                >
+                <div class="mg-top-40px">
+                  <div class="w-layout-hflex flex-horizontal">
+                    <a href="/services" class="btn-primary w-button"
+                      >Our services<span class="line-rounded-icon link-icon-right"
+                        ></span
+                      ></a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const button = document.getElementById('furniture-assembly-button');
+        const icon = document.getElementById('furniture-assembly-icon');
+
+        // Caminhos das imagens
+        const staticImage = '/assets/gif/furniture-static.png';
+        const gifImage = '/assets/gif/furniture-anim.gif';
+
+        // Evento para executar o GIF no hover
+        button.addEventListener('mouseenter', function() {
+          if (icon.src !== window.location.origin + gifImage) { // Evita recarregar o GIF se já está ativo
+            icon.src = gifImage; // Substitui a imagem estática pelo GIF
+            icon.classList.add('pulse-animation'); // Inicia a animação CSS
+          }
+        });
+
+        // Evento para reverter ao sair do hover
+        button.addEventListener('mouseleave', function() {
+          if (icon.src !== window.location.origin + staticImage) { // Evita recarregar a imagem estática se já está ativa
+            icon.src = staticImage; // Reverte para a imagem estática
+            icon.classList.remove('pulse-animation'); // Remove a animação
+          }
+        });
+      });
+    </script>
   </body>
 </html>
