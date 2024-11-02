@@ -6545,6 +6545,13 @@ figcaption {
   padding-right: 24px;
 }
 
+.container-default.flex-horizontal.center---mbp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-default.z-index-1 {
   z-index: 1;
   position: relative;
