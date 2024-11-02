@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="/components/styles.css" />
     <style>
       @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.2); }
-        100% { transform: scale(1); }
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
       }
 
       .pulse-animation {
@@ -60,32 +66,160 @@
               class="container-default"
             >
               <div class="container-default" role="tablist">
-                <a
-                  id="furniture-assembly-button"
-                  class="tab-left-icon w-inline-block w-tab-link w--current"
-                  href="#"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-0"
-                  aria-selected="true"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <!-- Carrega a imagem estática inicialmente -->
-                      <img
-                        id="furniture-assembly-icon"
-                        alt="Furniture Assembly Icon"
-                        src="/assets/gif/furniture-static.png" 
-                        class="image-size"
-                        width="40px"
-                      />
+                <div>
+                  <a
+                    id="furniture-assembly-button"
+                    class="tab-left-icon w-inline-block w-tab-link w--current"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="furniture-assembly-icon"
+                          alt="Furniture Assembly Icon"
+                          src="/assets/gif/furniture-static.png"
+                          class="image-size"
+                          width="40px"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div>Furniture Assembly</div>
-                </a>
+                    <div>Furniture Assembly</div>
+                  </a>
+                </div> <!--  first tab -->
+                <!-- second tab -->
+                <div>
+                  <a
+                    id="computer-help-button"
+                    class="tab-left-icon w-inline-block w-tab-link"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-1"
+                    aria-selected="false"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="computer-help-icon"
+                          alt="computer-help Icon"
+                          src="/assets/gif/computer-help-static.png"
+                          class="image-size"
+                          width="40px"
+                        />
+                      </div>
+                    </div>
+                    <div>Computer Help</div>
+                  </a>
+                </div>
+                <!-- third tab -->
+                <div>
+                  <a
+                    id="decoration-button"
+                    class="tab-left-icon w-inline-block w-tab-link w--current"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="decoration-icon"
+                          alt="decoration Icon"
+                          src="/assets/gif/decoration-static.png"
+                          class="image-size"
+                          width="40px"
+                        />
+                      </div>
+                    </div>
+                    <div>Decoration</div>
+                  </a>
+                </div> 
+                <!-- fourth tab -->
+                <div>
+                  <a
+                    id="gutter-cleaning-button"
+                    class="tab-left-icon w-inline-block w-tab-link w--current"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="gutter-cleaning-icon"
+                          alt="Gutter Cleaning Icon"
+                          src="/assets/gif/gutter-cleaning-static.png"
+                          class="image-size"
+                          width="40px"
+                        />
+                      </div>
+                    </div>
+                    <div>Gutter Cleaning</div>
+                  </a>
+                </div> 
+                <!-- fifth tab -->
+                <div>
+                  <a
+                    id="moving-help-button"
+                    class="tab-left-icon w-inline-block w-tab-link w--current"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="moving-help-icon"
+                          alt="Moving Help Icon"
+                          src="/assets/gif/moving-help-static.png"
+                          class="image-size"
+                          width="40px"
+                        />
+                      </div>
+                    </div>
+                    <div>Moving Help</div>
+                  </a>
+                </div> 
+                <!-- sixth tab -->
+                <div>
+                  <a
+                    id="smart-home-button"
+                    class="tab-left-icon w-inline-block w-tab-link w--current"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="smart-home-icon"
+                          alt="Smart Home Icon"
+                          src="/assets/gif/smart-home-static.png"
+                          class="image-size"
+                          width="40px"
+                        />
+                      </div>
+                    </div>
+                    <div>Smart Home</div>
+                  </a>
+                </div> 
                 <div class="mg-top-40px">
                   <div class="w-layout-hflex flex-horizontal">
                     <a href="/services" class="btn-primary w-button"
-                      >Our services<span class="line-rounded-icon link-icon-right"
+                      >Our services<span
+                        class="line-rounded-icon link-icon-right"
                         ></span
                       ></a
                     >
@@ -98,29 +232,38 @@
       </div>
     </section>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const button = document.getElementById('furniture-assembly-button');
-        const icon = document.getElementById('furniture-assembly-icon');
+      document.addEventListener("DOMContentLoaded", function () {
+        const services = [
+          { buttonId: "furniture-assembly-button", iconId: "furniture-assembly-icon", staticSrc: "/assets/gif/furniture-static.png", gifSrc: "/assets/gif/furniture-anim.gif" },
+          { buttonId: "computer-help-button", iconId: "computer-help-icon", staticSrc: "/assets/gif/computer-help-static.png", gifSrc: "/assets/gif/computer-help-anim.gif" },
+          { buttonId: "decoration-button", iconId: "decoration-icon", staticSrc: "/assets/gif/decoration-static.png", gifSrc: "/assets/gif/decoration-anim.gif" },
+          { buttonId: "gutter-cleaning-button", iconId: "gutter-cleaning-icon", staticSrc: "/assets/gif/gutter-cleaning-static.png", gifSrc: "/assets/gif/gutter-cleaning-anim.gif" },
+          { buttonId: "moving-help-button", iconId: "moving-help-icon", staticSrc: "/assets/gif/moving-help-static.png", gifSrc: "/assets/gif/moving-help-anim.gif" },
+          { buttonId: "smart-home-button", iconId: "smart-home-icon", staticSrc: "/assets/gif/smart-home-static.png", gifSrc: "/assets/gif/smart-home-anim.gif" },
+          // Adicione outras entradas aqui para os demais ícones
+        ];
 
-        // Caminhos das imagens
-        const staticImage = '/assets/gif/furniture-static.png';
-        const gifImage = '/assets/gif/furniture-anim.gif';
+        function setHoverEffect({ buttonId, iconId, staticSrc, gifSrc }) {
+          const button = document.getElementById(buttonId);
+          const icon = document.getElementById(iconId);
 
-        // Evento para executar o GIF no hover
-        button.addEventListener('mouseenter', function() {
-          if (icon.src !== window.location.origin + gifImage) { // Evita recarregar o GIF se já está ativo
-            icon.src = gifImage; // Substitui a imagem estática pelo GIF
-            icon.classList.add('pulse-animation'); // Inicia a animação CSS
-          }
-        });
+          button.addEventListener("mouseenter", function () {
+            if (icon.src !== window.location.origin + gifSrc) {
+              icon.src = gifSrc;
+              icon.classList.add("pulse-animation");
+            }
+          });
 
-        // Evento para reverter ao sair do hover
-        button.addEventListener('mouseleave', function() {
-          if (icon.src !== window.location.origin + staticImage) { // Evita recarregar a imagem estática se já está ativa
-            icon.src = staticImage; // Reverte para a imagem estática
-            icon.classList.remove('pulse-animation'); // Remove a animação
-          }
-        });
+          button.addEventListener("mouseleave", function () {
+            if (icon.src !== window.location.origin + staticSrc) {
+              icon.src = staticSrc;
+              icon.classList.remove("pulse-animation");
+            }
+          });
+        }
+
+        // Aplicar o efeito de hover para cada serviço
+        services.forEach(setHoverEffect);
       });
     </script>
   </body>
