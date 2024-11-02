@@ -6,11 +6,24 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/components/styles.css">
+    <style>
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.2); }
+          100% { transform: scale(1); }
+        }
+  
+        .pulse-animation {
+          animation: pulse 0.5s ease-in-out;
+          animation-iteration-count: 1;
+        }
+      </style>
 </head>
 <body>
     <section id="header"></section>
     <section id="hero"></section>
     <section id="about"></section>
+    <section id="services"></section>
     <section id="process"></section>
     <footer id="footer"></footer>
 
@@ -19,6 +32,7 @@
             $("#header").load("header.html");
             $("#hero").load("hero-section.html");
             $("#about").load("section-about.html");
+            $("#services").load("section-services01.html");
             $("#process").load("section-process.html");
             $("#footer").load("footer.html");
         });
@@ -27,6 +41,32 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const button = document.getElementById('furniture-assembly-button');
+          const icon = document.getElementById('furniture-assembly-icon');
+  
+          // Caminhos das imagens
+          const staticImage = '/assets/gif/furniture-static.png';
+          const gifImage = '/assets/gif/furniture-anim.gif';
+  
+          // Evento para executar o GIF no hover
+          button.addEventListener('mouseenter', function() {
+            if (icon.src !== window.location.origin + gifImage) { // Evita recarregar o GIF se já está ativo
+              icon.src = gifImage; // Substitui a imagem estática pelo GIF
+              icon.classList.add('pulse-animation'); // Inicia a animação CSS
+            }
+          });
+  
+          // Evento para reverter ao sair do hover
+          button.addEventListener('mouseleave', function() {
+            if (icon.src !== window.location.origin + staticImage) { // Evita recarregar a imagem estática se já está ativa
+              icon.src = staticImage; // Reverte para a imagem estática
+              icon.classList.remove('pulse-animation'); // Remove a animação
+            }
+          });
+        });
       </script>
 </body>
 </html>
