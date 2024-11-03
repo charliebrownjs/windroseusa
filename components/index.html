@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <title>Minha Landing Page</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="/components/styles.css">
     <style>
-        @keyframes pulse {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.2); }
-          100% { transform: scale(1); }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
         }
-  
-        .pulse-animation {
-          animation: pulse 0.5s ease-in-out;
-          animation-iteration-count: 1;
+        50% {
+          transform: scale(1.2);
         }
-      </style>
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .pulse-animation {
+        animation: pulse 0.5s ease-in-out;
+        animation-iteration-count: 1;
+      }
+    </style>
 </head>
 <body>
     <section id="header"></section>
@@ -42,30 +48,39 @@
     <script>
         AOS.init();
       </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const button = document.getElementById('furniture-assembly-button');
-          const icon = document.getElementById('furniture-assembly-icon');
+      <<script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const services = [
+            { buttonId: "furniture-assembly-button", iconId: "furniture-assembly-icon", staticSrc: "/assets/gif/furniture-static.png", gifSrc: "/assets/gif/furniture-anim.gif" },
+            { buttonId: "computer-help-button", iconId: "computer-help-icon", staticSrc: "/assets/gif/computer-help-static.png", gifSrc: "/assets/gif/computer-help-anim.gif" },
+            { buttonId: "decoration-button", iconId: "decoration-icon", staticSrc: "/assets/gif/decoration-static.png", gifSrc: "/assets/gif/decoration-anim.gif" },
+            { buttonId: "gutter-cleaning-button", iconId: "gutter-cleaning-icon", staticSrc: "/assets/gif/gutter-cleaning-static.png", gifSrc: "/assets/gif/gutter-cleaning-anim.gif" },
+            { buttonId: "moving-help-button", iconId: "moving-help-icon", staticSrc: "/assets/gif/moving-help-static.png", gifSrc: "/assets/gif/moving-help-anim.gif" },
+            { buttonId: "smart-home-button", iconId: "smart-home-icon", staticSrc: "/assets/gif/smart-home-static.png", gifSrc: "/assets/gif/smart-home-anim.gif" },
+            // Adicione outras entradas aqui para os demais ícones
+          ];
   
-          // Caminhos das imagens
-          const staticImage = '/assets/gif/furniture-static.png';
-          const gifImage = '/assets/gif/furniture-anim.gif';
+          function setHoverEffect({ buttonId, iconId, staticSrc, gifSrc }) {
+            const button = document.getElementById(buttonId);
+            const icon = document.getElementById(iconId);
   
-          // Evento para executar o GIF no hover
-          button.addEventListener('mouseenter', function() {
-            if (icon.src !== window.location.origin + gifImage) { // Evita recarregar o GIF se já está ativo
-              icon.src = gifImage; // Substitui a imagem estática pelo GIF
-              icon.classList.add('pulse-animation'); // Inicia a animação CSS
-            }
-          });
+            button.addEventListener("mouseenter", function () {
+              if (icon.src !== window.location.origin + gifSrc) {
+                icon.src = gifSrc;
+                icon.classList.add("pulse-animation");
+              }
+            });
   
-          // Evento para reverter ao sair do hover
-          button.addEventListener('mouseleave', function() {
-            if (icon.src !== window.location.origin + staticImage) { // Evita recarregar a imagem estática se já está ativa
-              icon.src = staticImage; // Reverte para a imagem estática
-              icon.classList.remove('pulse-animation'); // Remove a animação
-            }
-          });
+            button.addEventListener("mouseleave", function () {
+              if (icon.src !== window.location.origin + staticSrc) {
+                icon.src = staticSrc;
+                icon.classList.remove("pulse-animation");
+              }
+            });
+          }
+  
+          // Aplicar o efeito de hover para cada serviço
+          services.forEach(setHoverEffect);
         });
       </script>
 </body>
