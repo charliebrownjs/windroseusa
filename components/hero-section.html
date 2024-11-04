@@ -7,6 +7,8 @@
     <title>Hero section</title>
     <link rel="stylesheet" href="/components/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jquery -->
+    
 </head>
 
 <body>
@@ -59,19 +61,19 @@
                     <div style="opacity: 1;" class="card home-v3-stat-card">
                         <div class="w-layout-grid grid-4-columns hero-v3-stat">
                             <div class="w-layout-vflex flex-vertical center text-center">
-                                <div class="display-3 mg-bottom-4px">815</div>
+                                <div data-count="815" class="counter display-3 mg-bottom-4px">0</div>
                                 <div class="text-200">Taskrabbit reviews</div>
                             </div>
                             <div  class="w-layout-vflex flex-vertical center text-center">
-                                <div class="display-3 mg-bottom-4px">1.2 K</div>
+                                <div data-count="1200" class="counter display-3 mg-bottom-4px">1.2 K</div>
                                 <div class="text-200">Completed Projects</div>
                             </div>
                             <div  class="w-layout-vflex flex-vertical center text-center">
-                                <div class="display-3 mg-bottom-4px">1.4 K+</div>
+                                <div data-count="1400" class="counter display-3 mg-bottom-4px">0</div>
                                 <div class="text-200">Overall tasks</div>
                             </div>
                             <div  class="w-layout-vflex flex-vertical center text-center">
-                                <div class="display-3 mg-bottom-4px">20</div>
+                                <div data-count="20" class="counter display-3 mg-bottom-4px">0</div>
                                 <div class="text-200">Years of experience</div>
                             </div>
                         </div>
@@ -81,5 +83,40 @@
         </section>
     </div>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Seleciona todos os elementos com a classe 'counter' e os armazena em um array
+        var counters = $('.counter').toArray();
+    
+        // Ordena os counters com base no atributo data-count em ordem decrescente
+        counters.sort(function(a, b) {
+            return $(b).attr('data-count') - $(a).attr('data-count');
+        });
+    
+        // Inicia a animação para cada counter na ordem definida
+        $(counters).each(function(index) {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+    
+            // Define um atraso baseado no índice para que números maiores terminem por último
+            setTimeout(function() {
+                $({ countNum: $this.text() }).animate({
+                    countNum: countTo
+                },
+                {
+                    duration: 3000,
+                    easing: 'linear',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    }
+                });
+            }, index * 200); // Atraso de 500 ms entre as animações
+        });
+    });
+    </script>
 </html>
