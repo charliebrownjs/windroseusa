@@ -3979,7 +3979,6 @@ figcaption {
 
 .card {
   width: 100%;
-  border: 1px solid var(--neutral--300);
   background-color: #ffce51;
   color: var(--neutral--600);
   border-radius: 24px;
@@ -4369,7 +4368,7 @@ figcaption {
 }
 
 .card.icon-top-card-v2 {
-  box-shadow: 0 2px 7px 0 var(--general--shadow-02);
+ /* box-shadow: 0 2px 7px 0 var(--general--shadow-02); */
 }
 
 .card.utility-page {
