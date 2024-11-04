@@ -2108,6 +2108,7 @@ textarea.w-input, textarea.w-select {
   --neutral--200: #f7f9fc;
   --button-shadow--color-2: rgba(255, 206, 81, .08);
   --secondary--color-1: #4b5050;
+  --accent--primary-2: #F29544;
   --accent--primary-1: #ffce51;
   --neutral--700: #3d4249;
   --neutral--500: #9399a2;
@@ -7717,7 +7718,7 @@ figcaption {
 
 .tab-left-icon:hover {
   border-color: var(--accent--primary-1);
-  color: var(--accent--primary-1);
+  color: var(--accent--primary-2);
 }
 
 .tab-left-icon.w--current {

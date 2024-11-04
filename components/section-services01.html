@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Section Services01</title>
     <link rel="stylesheet" href="/components/styles.css" />
+    <style>
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .pulse-animation {
+        animation: pulse 0.5s ease-in-out;
+        animation-iteration-count: 1;
+      }
+    </style>
   </head>
   <body>
-    <section class="section pd-0px">
+    <section style="background-color: #fff;" class="section pd-0px">
       <div class="inner---section big-size inner-section-services">
         <div class="half-bg-top half-bg-why-us">
           <div class="bg-floating why-us"></div>
@@ -17,7 +35,7 @@
             <div class="mg-bottom-40px">
               <div class="w-layout-vflex flex-vertical center text-center">
                 <div class="mg-bottom-8px">
-                  <div class="badge-primary small bold">Why us?</div>
+                  <div class="badge-primary light small bold">Why us?</div>
                 </div>
                 <div class="inner-container _402px center">
                   <div class="inner-container _350px---tablet center">
@@ -48,169 +66,207 @@
               class="container-default"
             >
               <div class="container-default" role="tablist">
-                <a
-                  data-w-tab="Electrical repairs"
-                  class="tab-left-icon w-inline-block w-tab-link w--current"
-                  href="#w-tabs-0-data-w-pane-0"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-0"
-                  aria-selected="true"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Electrical Repairs Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f985045c7ef1faff2b7_electrical-repairs-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                    </div>
-                  </div>
-                  <div>Electrical repairs</div> </a
-                ><a
-                  data-w-tab="Lighting installation"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-1"
-                  href="#w-tabs-0-data-w-pane-1"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-1"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Lighting Installation Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f92139aedee1c7f20bb_lighting-installation-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
+                <div>
+                  <a
+                    id="smart-home-button"
+                    class="tab-left-icon w-inline-block w-tab-link"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="smart-home-icon"
+                          alt="Smart Home Icon"
+                          src="/assets/gif/smart-home-static.png"
+                          class="image-size"
+                          width="85px"
+                        />
+                        
                       </div>
                     </div>
-                  </div>
-                  <div>Lighting installation</div> </a
-                ><a
-                  data-w-tab="Electrical maintenance"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-2"
-                  href="#w-tabs-0-data-w-pane-2"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-2"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Electrical Maintenance Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f967457503c5bd8dfb5_electrical-maintenance-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
+                    <div><div>Smart Home Services</div> <p style="font-weight: 300;font-size: 12px;max-width: 300px;margin-top: 0px; line-height:1.4;" class="subserbutton">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p></div>
+                  </a>
+                </div> 
+                <div>
+                  <a
+                    id="furniture-assembly-button"
+                    class="tab-left-icon w-inline-block w-tab-link"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="furniture-assembly-icon"
+                          alt="Furniture Assembly Icon"
+                          src="/assets/gif/furniture-static.png"
+                          class="image-size"
+                          width="85px"
+                        />
                       </div>
                     </div>
-                  </div>
-                  <div>Electrical maintenance</div> </a
-                ><a
-                  data-w-tab="Wiring and rewiring"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-3"
-                  href="#w-tabs-0-data-w-pane-3"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-3"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Wiring And Rewiring Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f9420b5be3fa2d403d1_wiring-and-rewiring-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
+                    <div><div>Furniture Assembly</div> <p style="font-weight: 300;font-size: 12px;max-width: 300px;margin-top: 0px; line-height:1.4;" class="subserbutton">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p></div>
+                  </a>
+                </div> <!--  first tab -->
+                <!-- second tab -->
+                <div>
+                  <a
+                    id="computer-help-button"
+                    class="tab-left-icon w-inline-block w-tab-link"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-1"
+                    aria-selected="false"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="computer-help-icon"
+                          alt="computer-help Icon"
+                          src="/assets/gif/computer-help-static.png"
+                          class="image-size"
+                          width="85px"
+                        />
                       </div>
                     </div>
-                  </div>
-                  <div>Wiring and rewiring</div> </a
-                ><a
-                  data-w-tab="Safety inspections"
-                  class="tab-left-icon w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-4"
-                  href="#w-tabs-0-data-w-pane-4"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-4"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Safety Inspections Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f92327e8b6c0422ec45_safety-inspections-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
+                    <div><div>Computer Help</div> <p style="font-weight: 300;font-size: 12px;max-width: 300px;margin-top: 0px; line-height:1.4;" class="subserbutton">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p></div>
+                  </a>
+                </div>
+                <!-- third tab -->
+                <div>
+                  <a
+                    id="decoration-button"
+                    class="tab-left-icon w-inline-block w-tab-link"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="decoration-icon"
+                          alt="decoration Icon"
+                          src="/assets/gif/decoration-static.png"
+                          class="image-size"
+                          width="85px"
+                        />
                       </div>
                     </div>
-                  </div>
-                  <div>Safety inspections</div> </a
-                ><a
-                  data-w-tab="Home automation"
-                  class="tab-left-icon last w-inline-block w-tab-link"
-                  id="w-tabs-0-data-w-tab-5"
-                  href="#w-tabs-0-data-w-pane-5"
-                  role="tab"
-                  aria-controls="w-tabs-0-data-w-pane-5"
-                  aria-selected="false"
-                  tabindex="-1"
-                >
-                  <div class="mg-right-16px">
-                    <div class="flex-vertical center">
-                      <img
-                        alt="Home Automation Icon - Handyman X Webflow Template"
-                        src="https://cdn.prod.website-files.com/649af44cc894b19720c0cd2c/64a32f92b7840d452f60f6de_home-automation-icon-handyman-x-webflow-template.svg"
-                        class="image-size"
-                      />
-                      <div class="tab-status-wrapper">
-                        <div
-                          style="display: none; opacity: 0"
-                          class="tab-active"
-                        ></div>
+                    <div><div>Decoration</div> <p style="font-weight: 300;font-size: 12px;max-width: 300px;margin-top: 0px; line-height:1.4;" class="subserbutton">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p></div>
+                  </a>
+                </div> 
+                <!-- fourth tab -->
+                <div>
+                  <a
+                    id="gutter-cleaning-button"
+                    class="tab-left-icon w-inline-block w-tab-link"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        <img
+                          id="gutter-cleaning-icon"
+                          alt="Gutter Cleaning Icon"
+                          src="/assets/gif/gutter-cleaning-static.png"
+                          class="image-size"
+                          width="85px"
+                        />
                       </div>
                     </div>
+                    <div><div>Gutter Cleaning</div> <p style="font-weight: 300;font-size: 12px;max-width: 300px;margin-top: 0px; line-height:1.4;" class="subserbutton">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p></div>
+                  </a>
+                </div> 
+                <!-- fifth tab -->
+                <div>
+                  <a
+                    id="moving-help-button"
+                    class="tab-left-icon w-inline-block w-tab-link"
+                    href="#"
+                    role="tab"
+                    aria-controls="w-tabs-0-data-w-pane-0"
+                    aria-selected="true"
+                  >
+                    <div class="mg-right-16px">
+                      <div class="flex-vertical center">
+                        <!-- Carrega a imagem estática inicialmente -->
+                        
+                        <img
+                          id="moving-help-icon"
+                          alt="Moving Help Icon"
+                          src="/assets/gif/moving-help-static.png"
+                          class="image-size"
+                          width="85px"
+                        />
+                      </div>
+                    </div>
+                    <div><div>Help Moving</div> <p style="font-weight: 300;font-size: 12px;max-width: 300px;margin-top: 0px; line-height:1.4;" class="subserbutton">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p></div>
+                  </a>
+                </div> 
+                <!-- sixth tab -->
+                <div class="mg-top-40px">
+                  <div class="w-layout-hflex flex-horizontal">
+                    <a href="/services" class="btn-primary w-button"
+                      >Our services<span
+                        class="line-rounded-icon link-icon-right"
+                        ></span
+                      ></a
+                    >
                   </div>
-                  <div>Home automation</div>
-                </a>
-              </div>
-            </div>
-            <div class="mg-top-40px">
-              <div class="w-layout-hflex flex-horizontal">
-                <a href="/services" class="btn-primary w-button"
-                  >Our services<span class="line-rounded-icon link-icon-right"
-                    ></span
-                  ></a
-                >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const services = [
+          { buttonId: "furniture-assembly-button", iconId: "furniture-assembly-icon", staticSrc: "/assets/gif/furniture-static.png", gifSrc: "/assets/gif/furniture-anim.gif" },
+          { buttonId: "computer-help-button", iconId: "computer-help-icon", staticSrc: "/assets/gif/computer-help-static.png", gifSrc: "/assets/gif/computer-help-anim.gif" },
+          { buttonId: "decoration-button", iconId: "decoration-icon", staticSrc: "/assets/gif/decoration-static.png", gifSrc: "/assets/gif/decoration-anim.gif" },
+          { buttonId: "gutter-cleaning-button", iconId: "gutter-cleaning-icon", staticSrc: "/assets/gif/gutter-cleaning-static.png", gifSrc: "/assets/gif/gutter-cleaning-anim.gif" },
+          { buttonId: "moving-help-button", iconId: "moving-help-icon", staticSrc: "/assets/gif/moving-help-static.png", gifSrc: "/assets/gif/moving-help-anim.gif" },
+          { buttonId: "smart-home-button", iconId: "smart-home-icon", staticSrc: "/assets/gif/smart-home-static.png", gifSrc: "/assets/gif/smart-home-anim.gif" },
+          // Adicione outras entradas aqui para os demais ícones
+        ];
+
+        function setHoverEffect({ buttonId, iconId, staticSrc, gifSrc }) {
+          const button = document.getElementById(buttonId);
+          const icon = document.getElementById(iconId);
+
+          button.addEventListener("mouseenter", function () {
+            if (icon.src !== window.location.origin + gifSrc) {
+              icon.src = gifSrc;
+              icon.classList.add("pulse-animation");
+            }
+          });
+
+          button.addEventListener("mouseleave", function () {
+            if (icon.src !== window.location.origin + staticSrc) {
+              icon.src = staticSrc;
+              icon.classList.remove("pulse-animation");
+            }
+          });
+        }
+
+        // Aplicar o efeito de hover para cada serviço
+        services.forEach(setHoverEffect);
+      });
+    </script>
   </body>
 </html>
