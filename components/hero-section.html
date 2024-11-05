@@ -89,38 +89,53 @@
     $(document).ready(function() {
         // Seleciona todos os elementos com a classe 'counter' e os armazena em um array
         var counters = $('.counter').toArray();
-    
+
         // Ordena os counters com base no atributo data-count em ordem decrescente
         counters.sort(function(a, b) {
             return $(b).attr('data-count') - $(a).attr('data-count');
         });
-    
-        // Inicia a animação para cada counter na ordem definida
-        $(counters).each(function(index) {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-    
-            // Define um atraso baseado no índice para que números maiores terminem por último
+
+        // Função para iniciar a animação
+        function startAnimation($element, countTo, index) {
             setTimeout(function() {
-                $({ countNum: $this.text() }).animate({
+                $({ countNum: $element.text() }).animate({
                     countNum: countTo
                 },
                 {
                     duration: 3000,
                     easing: 'linear',
                     step: function() {
-                        $this.text(Math.floor(this.countNum));
+                        $element.text(Math.floor(this.countNum));
                     },
                     complete: function() {
-                        $this.text(this.countNum);
-                        //alert('finished');
+                        $element.text(this.countNum);
                     }
                 });
-            }, index * 200); // Atraso de 500 ms entre as animações
-        });
-        
+            }, index * 200); // Atraso de 200 ms entre as animações
+        }
+
+        // Configura o IntersectionObserver para detectar quando os elementos entram na viewport
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let $element = $(entry.target),
+                        countTo = $element.attr('data-count');
+                    
+                    // Inicia a animação quando o elemento está na viewport
+                    startAnimation($element, countTo, counters.indexOf(entry.target));
+                    
+                    // Desconecta o observer para evitar múltiplas animações
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 }); // threshold define 50% do elemento visível
+
+        // Observa cada contador individualmente
+        counters.forEach(counter => observer.observe(counter));
     });
-    </script>
+</script>
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
