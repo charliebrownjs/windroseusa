@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Aware Button</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS Converted from SCSS */
+
+      :root {
+        --btn-ra-width: 250px;
+        --btn-ra-height: 80px;
+        --btn-ra-color: #5a67d8;
+        --btn-ra-color-dark: #4c51bf;
+        --btn-ra-color-tint: #a9afb7;
+      }
+
+      html {
+        padding-top: 50px;
+        font-family: "Open Sans", Helvetica, arial, sans-serif;
+        text-align: center;
+        background-color: var(--bg-color);
+      }
+
+      /*   *, *::before, *::after {
+            box-sizing: border-box;
+            transition: 0.5s ease-in-out;
+        } 
+
+        i, em, b, strong, span {
+            transition: none;
+        }
+
+        *::before, *::after {
+            z-index: -1;
+        }
+           */
+      a {
+        text-decoration: none;
+        line-height: var(--btn-ra-height);
+      }
+
+      .centerer {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .btn-ra-6 {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        max-width: var(--btn-ra-width);
+        height: var(--btn-ra-height);
+        margin: 1rem auto;
+        text-transform: uppercase;
+        border: 1px solid currentColor;
+        color: var(--btn-ra-color-tint);
+      }
+
+      .btn-ra-6 span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: var(--btn-ra-color-dark);
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+
+      .btn-ra-6:hover {
+        color: var(--btn-ra-color-tint);
+      }
+
+      .btn-ra-6:hover span {
+        width: 225%;
+        height: calc(var(--btn-ra-width) * 2.25);
+      }
+
+      .btn-ra-6:active {
+        background-color: var(--btn-ra-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centerer">
+      <a class="btn-ra-6" href="#">Position Aware<span></span></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $(".btn-ra-6")
+          .on("mouseenter", function (e) {
+            var parentOffset = $(this).offset(),
+              relX = e.pageX - parentOffset.left,
+              relY = e.pageY - parentOffset.top;
+            $(this).find("span").css({ top: relY, left: relX });
+          })
+          .on("mouseout", function (e) {
+            var parentOffset = $(this).offset(),
+              relX = e.pageX - parentOffset.left,
+              relY = e.pageY - parentOffset.top;
+            $(this).find("span").css({ top: relY, left: relX });
+          });
+      });
+    </script>
+  </body>
+</html>
