@@ -8299,10 +8299,12 @@ figcaption {
   display: flex;
 }
 
+/*
 .handyman-icon-font {
   font-family: Handyman X Icon Font, sans-serif;
   font-size: 24px;
-}
+} 
+  
 
 .handyman-icon-font.font-size-28px {
   font-size: 28px;
@@ -8310,7 +8312,7 @@ figcaption {
 
 .handyman-icon-font.font-size-20px {
   font-size: 20px;
-}
+} */
 
 .text-regular {
   font-weight: 400;
@@ -15958,7 +15960,7 @@ figcaption {
     justify-self: stretch;
   }
 }
-
+/*
 @font-face {
   font-family: "Social Icons Font";
   src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd81_social-icon-font.woff2")
@@ -16023,6 +16025,9 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+
+*/ 
+
 @font-face {
   font-family: "THICCCBOI";
   src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649b0d3609b5eb18badefae4_THICCCBOI-ExtraBold.woff2")
