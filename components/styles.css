@@ -3638,7 +3638,7 @@ p {
 
 a {
   color: var(--secondary--color-2);
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.3s;
 }
 

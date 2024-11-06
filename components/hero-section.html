@@ -1,142 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hero section</title>
-    <link rel="stylesheet" href="https://charliebrownjs.github.io/windroseusa/components/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://charliebrownjs.github.io/windroseusa/components/styles.css"
+    />
     <!-- Importação do AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    
-</head>
-
-<body>
-    <div class="page-wrapper"><!-- Page wrapper -->
-        <section class="section hero v3"> <!-- hero section -->
-            <div style="opacity: 1;" class="inner---section big-size inner-section-home-v3">
-                <div class="w-layout-blockcontainer container-default w-container">
-                    <div class="z-index-1">
-                        <div class="w-layout-vflex flex-vertical">
-                            <div class="inner-container _650px">
-                                <div class="inner-container _600px---tablet">
-                                    <div class="inner-container _500px---mbl">
-                                        <div class="inner-container _600px---tablet">
-                                            <div class="inner-container _450px---mbl">
-                                                <div class="inner-container _350px---mbp">
-                                                    <h1 class="display-1 color-neutral-100 mg-bottom-26px">Professional and reliable services</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="inner-container _590px _100-tablet">
-                                            <p class="color-neutral-100 mg-bottom-40px">No matter the size or complexity
-                                                of the project, we’re committed to giving it our very best. <span
-                                                    class="text-no-wrap"></span></p>
-                                        </div>
-                                        <div style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
-                                            class="buttons-row"><a href="#"
-                                                class="btn-primary button-row w-button">Book Online<span
-                                                    class="line-rounded-icon link-icon-right"></span></a><a
-                                                href="#" class="btn-secondary bg-white w-button">More about us</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="inner---bg-section">
-                    <div class="position-relative _w-h-100"><img
-                            src="#"
-                            alt="WindroseUSA"
-                            sizes="(max-width: 1439px) 100vw, 1395px"
-                            srcset="https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_500.png 500w, https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_800.png 800w, https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_1080.png 1080w, https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_1600.png 1600w, https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_2788.png 2788w"
-                            class="fit-cover _w-h-100">
-                        <div class="inner---section-bg-shadow black v1"></div>
-                    </div>
-                </div>
-            </div>
-            <div  data-aos="fade-up" class="w-layout-blockcontainer container-default w-container">
-                <div class="pd-left-right-24px pd-left---right-0---tablet">
-                    <div style="opacity: 1;" class="card home-v3-stat-card">
-                        <div class="w-layout-grid grid-4-columns hero-v3-stat">
-                            <div class="w-layout-vflex flex-vertical center text-center">
-                                <div data-count="815" class="counter display-3 mg-bottom-4px">0</div>
-                                <div class="text-200">Taskrabbit reviews</div>
-                            </div>
-                            <div  class="w-layout-vflex flex-vertical center text-center">
-                                <div data-count="1200" class="counter display-3 mg-bottom-4px">1.2 K</div>
-                                <div class="text-200">Completed Projects</div>
-                            </div>
-                            <div  class="w-layout-vflex flex-vertical center text-center">
-                                <div data-count="1400" class="counter display-3 mg-bottom-4px">0</div>
-                                <div class="text-200">Overall tasks</div>
-                            </div>
-                            <div  class="w-layout-vflex flex-vertical center text-center">
-                                <div data-count="20" class="counter display-3 mg-bottom-4px">0</div>
-                                <div class="text-200">Years of experience</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        // Seleciona todos os elementos com a classe 'counter' e os armazena em um array
-        var counters = $('.counter').toArray();
-
-        // Ordena os counters com base no atributo data-count em ordem decrescente
-        counters.sort(function(a, b) {
-            return $(b).attr('data-count') - $(a).attr('data-count');
-        });
-
-        // Função para iniciar a animação
-        function startAnimation($element, countTo, index) {
-            setTimeout(function() {
-                $({ countNum: $element.text() }).animate({
-                    countNum: countTo
-                },
-                {
-                    duration: 3000,
-                    easing: 'linear',
-                    step: function() {
-                        $element.text(Math.floor(this.countNum));
-                    },
-                    complete: function() {
-                        $element.text(this.countNum);
-                    }
-                });
-            }, index * 200); // Atraso de 200 ms entre as animações
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+          
+        :root {
+          --btn-ra-width: 250px;
+          --btn-ra-height: 80px;
+          --btn-ra-color: #101223;
+          --btn-ra-color-dark: #ffce51;
+          --btn-ra-color-tint: #fff;
         }
+  
+        html {
+          font-family: "Open Sans", Helvetica, arial, sans-serif;
+          text-align: center;
+        }
+       
+        a {
+          text-decoration: none;
+          line-height: var(--btn-ra-height);
+        }
+  
+        .centerer {
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+  
+        .btn-ra-6 {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          max-width: var(--btn-ra-width);
+          height: var(--btn-ra-height);
+          margin: 1rem auto;
+          text-transform: uppercase;
+          border: 1px solid currentColor;
+          color: var(--btn-ra-color-tint);
+          border-radius: 16px;
+        }
+  
+        .btn-ra-6 span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background-color: var(--btn-ra-color-dark);
+          transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+  
+        .btn-ra-6:hover {
+          color: var(--btn-ra-color);
+        }
+  
+        .btn-ra-6:hover span {
+          width: 225%;
+          height: calc(var(--btn-ra-width) * 2.25);
+        }
+  
+        .btn-ra-6:active {
+          background-color: var(--btn-ra-color);
+        }
+      </style>
+  </head>
 
-        // Configura o IntersectionObserver para detectar quando os elementos entram na viewport
-        let observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    let $element = $(entry.target),
-                        countTo = $element.attr('data-count');
-                    
-                    // Inicia a animação quando o elemento está na viewport
-                    startAnimation($element, countTo, counters.indexOf(entry.target));
-                    
-                    // Desconecta o observer para evitar múltiplas animações
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 }); // threshold define 50% do elemento visível
+  <body>
+    <div class="page-wrapper">
+      <!-- Page wrapper -->
+      <section class="section hero v3">
+        <!-- hero section -->
+        <div
+          style="opacity: 1"
+          class="inner---section big-size inner-section-home-v3"
+        >
+          <div class="w-layout-blockcontainer container-default w-container">
+            <div class="z-index-1">
+              <div class="w-layout-vflex flex-vertical">
+                <div class="inner-container _650px">
+                  <div class="inner-container _600px---tablet">
+                    <div class="inner-container _500px---mbl">
+                      <div class="inner-container _600px---tablet">
+                        <div class="inner-container _450px---mbl">
+                            
+                          <div class="inner-container _350px---mbp">
+                            <h1
+                              class="display-1 color-neutral-100 mg-bottom-26px"
+                            >
+                              Professional and reliable services
+                            </h1>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="inner-container _590px _100-tablet">
+                        <p class="color-neutral-100 mg-bottom-40px">
+                          No matter the size or complexity of the project, we’re
+                          committed to giving it our very best.
+                          <span class="text-no-wrap"></span>
+                        </p>
+                      </div>
+                      <div
+                        style="
+                          transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                            rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                            skew(0deg, 0deg);
+                          opacity: 1;
+                          transform-style: preserve-3d;
+                        "
+                        class="buttons-row"
+                      >
+                        <div class="centerer">
+                            <a class="btn-ra-6" href="#">Book online<span></span></a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner---bg-section">
+            <div class="position-relative _w-h-100">
+              <img
+                src="#"
+                alt="WindroseUSA"
+                sizes="(max-width: 1439px) 100vw, 1395px"
+                srcset="
+                  https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_500.png   500w,
+                  https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_800.png   800w,
+                  https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_1080.png 1080w,
+                  https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_1600.png 1600w,
+                  https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_2788.png 2788w
+                "
+                class="fit-cover _w-h-100"
+              />
+              <div class="inner---section-bg-shadow black v1"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          class="w-layout-blockcontainer container-default w-container"
+        >
+          <div class="pd-left-right-24px pd-left---right-0---tablet">
+            <div style="opacity: 1" class="card home-v3-stat-card">
+              <div class="w-layout-grid grid-4-columns hero-v3-stat">
+                <div class="w-layout-vflex flex-vertical center text-center">
+                  <div data-count="815" class="counter display-3 mg-bottom-4px">
+                    0
+                  </div>
+                  <div class="text-200">Taskrabbit reviews</div>
+                </div>
+                <div class="w-layout-vflex flex-vertical center text-center">
+                  <div
+                    data-count="1200"
+                    class="counter display-3 mg-bottom-4px"
+                  >
+                    1.2 K
+                  </div>
+                  <div class="text-200">Completed Projects</div>
+                </div>
+                <div class="w-layout-vflex flex-vertical center text-center">
+                  <div
+                    data-count="1400"
+                    class="counter display-3 mg-bottom-4px"
+                  >
+                    0
+                  </div>
+                  <div class="text-200">Overall tasks</div>
+                </div>
+                <div class="w-layout-vflex flex-vertical center text-center">
+                  <div data-count="20" class="counter display-3 mg-bottom-4px">
+                    0
+                  </div>
+                  <div class="text-200">Years of experience</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Seleciona todos os elementos com a classe 'counter' e os armazena em um array
+      var counters = $(".counter").toArray();
 
-        // Observa cada contador individualmente
-        counters.forEach(counter => observer.observe(counter));
+      // Ordena os counters com base no atributo data-count em ordem decrescente
+      counters.sort(function (a, b) {
+        return $(b).attr("data-count") - $(a).attr("data-count");
+      });
+
+      // Função para iniciar a animação
+      function startAnimation($element, countTo, index) {
+        setTimeout(function () {
+          $({ countNum: $element.text() }).animate(
+            {
+              countNum: countTo,
+            },
+            {
+              duration: 3000,
+              easing: "linear",
+              step: function () {
+                $element.text(Math.floor(this.countNum));
+              },
+              complete: function () {
+                $element.text(this.countNum);
+              },
+            }
+          );
+        }, index * 200); // Atraso de 200 ms entre as animações
+      }
+
+      // Configura o IntersectionObserver para detectar quando os elementos entram na viewport
+      let observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              let $element = $(entry.target),
+                countTo = $element.attr("data-count");
+
+              // Inicia a animação quando o elemento está na viewport
+              startAnimation($element, countTo, counters.indexOf(entry.target));
+
+              // Desconecta o observer para evitar múltiplas animações
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      ); // threshold define 50% do elemento visível
+
+      // Observa cada contador individualmente
+      counters.forEach((counter) => observer.observe(counter));
     });
-</script>
+  </script>
 
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-      </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    $(function () {
+      $(".btn-ra-6")
+        .on("mouseenter", function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find("span").css({ top: relY, left: relX });
+        })
+        .on("mouseout", function (e) {
+          var parentOffset = $(this).offset(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+          $(this).find("span").css({ top: relY, left: relX });
+        });
+    });
+  </script>
 </html>
