@@ -16014,15 +16014,15 @@ figcaption {
 /* font here <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet"> */
 @font-face {
   font-family: "Line Rounded Icons";
-  src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd5a_line-rounded-icons.woff2")
+  src: url("/assets/icons/line-rounded-icons.woff2")
       format("woff2"),
-    url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cda7_line-rounded-icons.eot")
+    url("/assets/icons/line-rounded-icons.eot")
       format("embedded-opentype"),
-    url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cdf8_line-rounded-icons.woff")
+    url("/assets/icons/line-rounded-icons.woff")
       format("woff"),
-    url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd37_line-rounded-icons.ttf")
+    url("/assets/icons/line-rounded-icons.ttf")
       format("truetype"),
-    url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd63_line-rounded-icons.svg")
+    url("/assets/icons/line-rounded-icons.svg")
       format("svg");
   font-weight: 400;
   font-style: normal;
