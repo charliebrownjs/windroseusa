@@ -15960,11 +15960,11 @@ figcaption {
     justify-self: stretch;
   }
 }
-/*
+
 @font-face {
   font-family: "Social Icons Font";
-  src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd81_social-icon-font.woff2")
-      format("woff2"),
+  src: url("/assets/fonts/IconsSocialMedia.ttf")
+      format("woff2"), /*
     url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd65_social-icon-font.eot")
       format("embedded-opentype"),
     url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd9f_social-icon-font.woff")
@@ -15972,11 +15972,12 @@ figcaption {
     url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd7c_social-icon-font.ttf")
       format("truetype"),
     url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd74_social-icon-font.svg")
-      format("svg");
+      format("svg"); 
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: swap; */
 }
+/*
 @font-face {
   font-family: "Line Square Icons";
   src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd7e_line-square-icons.woff2")
@@ -16008,8 +16009,8 @@ figcaption {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
-@font-face {
+} */ 
+/* @font-face {
   font-family: "Line Rounded Icons";
   src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd5a_line-rounded-icons.woff2")
       format("woff2"),
@@ -16025,8 +16026,8 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+*/
 
-*/ 
 
 @font-face {
   font-family: "THICCCBOI";
