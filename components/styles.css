@@ -3572,7 +3572,7 @@ textarea.w-select {
 
 body {
   color: var(--neutral--600);
-  font-family: THICCCBOI, sans-serif;
+  font-family: UBUNTU, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.667em;
@@ -6338,7 +6338,7 @@ figcaption {
 }
 
 .line-rounded-icon {
-  font-family: Line Rounded Icons, sans-serif;
+  font-family: Line Rounded Icons, Ubuntu, sans-serif;
 }
 
 .line-rounded-icon.style---dropdown-arrow-sidebar {
@@ -9860,7 +9860,7 @@ figcaption {
 
 @media screen and (min-width: 1440px) {
   body {
-    font-family: THICCCBOI, sans-serif;
+    font-family: UBUNTU, sans-serif;
   }
 
   .grid-2-columns.style---styleguide-wrapper {
@@ -16010,7 +16010,9 @@ figcaption {
   font-style: normal;
   font-display: swap;
 } */ 
-/* @font-face {
+
+/* font here <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet"> */
+@font-face {
   font-family: "Line Rounded Icons";
   src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd5a_line-rounded-icons.woff2")
       format("woff2"),
@@ -16026,36 +16028,36 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
-*/
+
 
 
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649b0d3609b5eb18badefae4_THICCCBOI-ExtraBold.woff2")
+  font-family: "UBUNTU";
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKkANDJ.woff2")
     format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649b0d4f87f7fe5316a5554f_THICCCBOI-Bold.woff2")
+  font-family: "UBUNTU";
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKkANDJ.woff2")
     format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649b0d594c3f26ff0f5a4288_THICCCBOI-Medium.woff2")
+  font-family: "UBUNTU";
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduh8MKkANDJ.woff2")
     format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "THICCCBOI";
-  src: url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649b0d60f783e7d06029acee_THICCCBOI-Regular.woff2")
+  font-family: "UBUNTU";
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhLsWkANDJ.woff2")
     format("woff2");
   font-weight: 400;
   font-style: normal;
