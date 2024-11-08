@@ -27,23 +27,27 @@
     <!-- Loagind -->
     <style>
       #loading {
-          display: none; /* Esconde a logo inicialmente */
+          display: none;
           position: fixed;
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
           z-index: 1000; /* Garante que fique acima de outros elementos */
+          background-color: white;
       }
   </style>
 </head>
 <body>
   <div id="loading">
-    <img src="/assets/LOGO-WINDROSEUSA.jpg" alt="Carregando...">
+    <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;" >
+    <img src="../assets/gif/loading.gif" alt="Carregando...">
+    </div>
+    
 </div>
 <script>
   $(window).on('load', function() {
       $('#loading').fadeOut(); // Esconde a logo quando a página estiver completamente carregada
-  });
+  }); 
   
   $(document).ready(function() {
       $('#loading').show(); // Mostra a logo assim que o DOM estiver pronto
