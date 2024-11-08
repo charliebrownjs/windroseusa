@@ -24,8 +24,31 @@
         animation-iteration-count: 1;
       }
     </style>
+    <!-- Loagind -->
+    <style>
+      #loading {
+          display: none; /* Esconde a logo inicialmente */
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1000; /* Garante que fique acima de outros elementos */
+      }
+  </style>
 </head>
 <body>
+  <div id="loading">
+    <img src="/assets/LOGO-WINDROSEUSA.jpg" alt="Carregando...">
+</div>
+<script>
+  $(window).on('load', function() {
+      $('#loading').fadeOut(); // Esconde a logo quando a página estiver completamente carregada
+  });
+  
+  $(document).ready(function() {
+      $('#loading').show(); // Mostra a logo assim que o DOM estiver pronto
+  });
+  </script>
     <section id="header"></section>
     <section id="hero"></section>
     <section id="about"></section>
