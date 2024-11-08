@@ -38,21 +38,7 @@
   </style>
 </head>
 <body>
-  <div id="loading">
-    <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;" >
-    <img src="../assets/gif/loading.gif" alt="Carregando...">
-    </div>
-    
-</div>
-<script>
-  $(window).on('load', function() {
-      $('#loading').fadeOut(); // Esconde a logo quando a página estiver completamente carregada
-  }); 
   
-  $(document).ready(function() {
-      $('#loading').show(); // Mostra a logo assim que o DOM estiver pronto
-  });
-  </script>
     <section id="header"></section>
     <section id="hero"></section>
     <section id="about"></section>
@@ -323,5 +309,21 @@
           services.forEach(setHoverEffect);
         });
       </script>
+      <!-- preload 
+      <div id="loading">
+        <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;" >
+        <img src="../assets/gif/loading.gif" alt="Carregando...">
+        </div>
+        
+    </div>
+    <script>
+      $(window).on('load', function() {
+          $('#loading').fadeOut(); // Esconde a logo quando a página estiver completamente carregada
+      }); 
+      
+      $(document).ready(function() {
+          $('#loading').show(); // Mostra a logo assim que o DOM estiver pronto
+      });
+      </script> -->
 </body>
 </html>
