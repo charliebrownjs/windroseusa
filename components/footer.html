@@ -7,7 +7,77 @@
     <title>Footer Component</title>
     <link rel="stylesheet" href="/components/styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+          
+        :root {
+          --btn-ra-width: 250px;
+          --btn-ra-height: 80px;
+          --btn-ra-color: #101223;
+          --btn-ra-color-dark: #ffce51;
+          --btn-ra-color-tint: #fff;
+        }
+  
+        a {
+          text-decoration: none;
+        }
+  
+        .centerer {
+          width: 50%;
+          max-width: 600px;
+          margin-left: 0;
+          margin-right: auto;
+          padding: 0 0rem;
+        }
 
+        .centerer-flex {
+          display: flex;
+          justify-content: start;
+          align-items: start;
+        }
+  
+        .btn-ra-footer {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          max-width: var(--btn-ra-width);
+          height: var(--btn-ra-height);
+          margin: 1rem auto;
+          text-align: center;
+          border: 1px solid currentColor;
+          color: var(--btn-ra-color);
+          border-radius: 16px;
+          line-height: var(--btn-ra-height);
+        }
+  
+        .btn-ra-footer span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background-color: var(--btn-ra-color);
+          transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+  
+        .btn-ra-footer:hover {
+          color: var(--btn-ra-color-tint);
+          border-color: var(--btn-ra-color-dark);
+        }
+  
+        .btn-ra-footer:hover span {
+          width: 225%;
+          height: calc(var(--btn-ra-width) * 2.25);
+        }
+  
+        .btn-ra-footer:active {
+          background-color: var(--btn-ra-color);
+        }
+      </style>
 </head>
 
 <body>
@@ -16,8 +86,7 @@
         <div class="footer-container">
             <footer class="footer-wrapper">
                 <div  class="cta-footer-wrapper">
-                    <div data-aos="zoom-out" class="cta-footer"
-                        >
+                    <div data-aos="zoom-out" class="cta-footer">
                         <div class="w-layout-grid grid-2-columns cta-footer-grid-2-col">
                             <div class="inner-container _468px _100-tablet">
                                 <div class="inner-container _350px---mbl center">
@@ -25,11 +94,10 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="buttons-row right center---tablet"
-                                >
-                                <a href="#" class="btn-primary black button-row w-button">Book Online<span
-                                        class="line-rounded-icon link-icon-right" style="">&#x25B6;</span></a><a
-                                    href="#" class="btn-secondary w-button">More about us</a>
+                            <div class="buttons-row right center---tablet">
+                                
+                                    <a class="btn-ra-footer" href="#">Book online<span></span></a>
+                                  
                             </div>
                         </div>
                     </div>
@@ -139,11 +207,30 @@
             </footer>
         </div>
     </div> <!-- End Footer -->
+    <!-- animated button -->
+    <script>
+        $(function () {
+          $(".btn-ra-footer")
+            .on("mouseenter", function (e) {
+              var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+              $(this).find("span").css({ top: relY, left: relX });
+            })
+            .on("mouseout", function (e) {
+              var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+              $(this).find("span").css({ top: relY, left: relX });
+            });
+        });
+      </script> 
     <!-- Importação do AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
+
 </body>
 
 </html>
