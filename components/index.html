@@ -24,11 +24,269 @@
         animation-iteration-count: 1;
       }
     </style>
+    <style>
+          
+      :root {
+        --btn-ra-width: 250px;
+        --btn-ra-height: 80px;
+        --btn-ra-color: #101223;
+        --btn-ra-color-dark: #ffce51;
+        --btn-ra-color-tint: #fff;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .centerer {
+        width: 50%;
+        max-width: 600px;
+        margin-left: 0;
+        margin-right: auto;
+        padding: 0 0rem;
+      }
+
+      .centerer-flex {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+      }
+
+      .btn-ra-footer {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          max-width: var(--btn-ra-width);
+          height: var(--btn-ra-height);
+          margin: 1rem auto;
+          text-align: center;
+          border: 1px solid currentColor;
+          color: var(--btn-ra-color);
+          border-radius: 16px;
+          line-height: var(--btn-ra-height);
+        }
+  
+        .btn-ra-footer span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background-color: var(--btn-ra-color);
+          transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+  
+        .btn-ra-footer:hover {
+          color: var(--btn-ra-color-tint);
+          border-color: var(--btn-ra-color-dark);
+        }
+  
+        .btn-ra-footer:hover span {
+          width: 225%;
+          height: calc(var(--btn-ra-width) * 2.25);
+        }
+  
+        .btn-ra-footer:active {
+          background-color: var(--btn-ra-color);
+        }
+
+      .btn-ra-6 {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        max-width: var(--btn-ra-width);
+        height: var(--btn-ra-height);
+        margin: 1rem auto;
+        text-transform: uppercase;
+        text-align: center;
+        border: 1px solid currentColor;
+        color: var(--btn-ra-color-tint);
+        border-radius: 16px;
+        line-height: var(--btn-ra-height);
+      }
+
+      .btn-ra-6 span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: var(--btn-ra-color-dark);
+        transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+
+      .btn-ra-6:hover {
+        color: var(--btn-ra-color);
+      }
+
+      .btn-ra-6:hover span {
+        width: 225%;
+        height: calc(var(--btn-ra-width) * 2.25);
+      }
+
+      .btn-ra-6:active {
+        background-color: var(--btn-ra-color);
+      }
+    </style>
 </head>
 <body>
     <section id="header"></section>
-    <section id="hero"></section>
-    <section id="about"></section>
+    <!-- hero section -->
+    <section class="section hero v3">
+      <!-- hero section -->
+      <div
+        style="opacity: 1"
+        class="inner---section big-size inner-section-home-v3"
+      >
+        <div class="w-layout-blockcontainer container-default w-container">
+          <div class="z-index-1">
+            <div class="w-layout-vflex flex-vertical">
+              <div class="inner-container _650px">
+                <div class="inner-container _600px---tablet">
+                  <div class="inner-container _500px---mbl">
+                    <div class="inner-container _600px---tablet">
+                      <div class="inner-container _450px---mbl">
+                          
+                        <div class="inner-container _350px---mbp">
+                          <h1
+                            class="display-1 color-neutral-100 mg-bottom-26px"
+                          >
+                            Professional and reliable services
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="inner-container _590px _100-tablet">
+                      <p class="color-neutral-100 mg-bottom-40px">
+                        No matter the size or complexity of the project, we’re
+                        committed to giving it our very best.
+                        <span class="text-no-wrap"></span>
+                      </p>
+                    </div>
+                    <div
+                      style="
+                        transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                          rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                          skew(0deg, 0deg);
+                        opacity: 1;
+                        transform-style: preserve-3d;
+                      "
+                      class="buttons-row"
+                    >
+                      <div class="centerer">
+                          <a class="btn-ra-6" href="#">Book online<span></span></a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner---bg-section">
+          <div class="position-relative _w-h-100">
+            <img
+              src="#"
+              alt="WindroseUSA"
+              sizes="(max-width: 1439px) 100vw, 1395px"
+              srcset="
+                https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_500.png   500w,
+                https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_800.png   800w,
+                https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_1080.png 1080w,
+                https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_1600.png 1600w,
+                https://charliebrownjs.github.io/windroseusa/assets/hero_windroseusa_2788.png 2788w
+              "
+              class="fit-cover _w-h-100"
+            />
+            <div class="inner---section-bg-shadow black v1"></div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-aos="fade-up"
+        class="w-layout-blockcontainer container-default w-container"
+      >
+        <div class="pd-left-right-24px pd-left---right-0---tablet">
+          <div style="opacity: 1" class="card home-v3-stat-card">
+            <div class="w-layout-grid grid-4-columns hero-v3-stat">
+              <div class="w-layout-vflex flex-vertical center text-center">
+                <div data-count="815" class="counter display-3 mg-bottom-4px">
+                  0
+                </div>
+                <div class="text-200">Five-stars Reviews</div>
+              </div>
+              <div class="w-layout-vflex flex-vertical center text-center">
+                <div
+                  data-count="1200"
+                  class="counter display-3 mg-bottom-4px"
+                >
+                  1.2 K
+                </div>
+                <div class="text-200">Completed Projects</div>
+              </div>
+              <div class="w-layout-vflex flex-vertical center text-center">
+                <div
+                  data-count="10400"
+                  class="counter display-3 mg-bottom-4px"
+                >
+                  0
+                </div>
+                <div class="text-200">Hours of work</div>
+              </div>
+              <div class="w-layout-vflex flex-vertical center text-center">
+                <div data-count="20" class="counter display-3 mg-bottom-4px">
+                  0
+                </div>
+                <div class="text-200">Years of experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+    <section class="section pd-bottom-0px"> <!-- section -->
+      <div class="w-layout-blockcontainer container-default w-container">
+          <div>
+              <div class="mg-bottom-32px mg-bottom-32px---mbl"> <!-- container bg-red-400 -->
+                  <div class="w-layout-hflex flex-horizontal space-between center---tablet">
+                      <div class="inner-container _490px bg">
+                          <div class="inner-container _400px---mbl">
+                              <div data-aos="fade-up" data-aos-delay="10" class="badge-top-wrapper">
+                                  <div class="badge-top">About</div>
+                              </div>
+                              <h2 data-aos="fade-up" data-aos-delay="200" class=" heading-h2-size extra-bold mg-bottom-0">Over 18+ years experience assembling hundreds of different products.</h2>
+                          </div>
+                      </div><a href="#" data-aos="fade-up" data-aos-delay="300" class=" btn-secondary align-self-bottom center---tablet w-button">About us<span class="line-rounded-icon link-icon-right" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></span> </a>
+                  </div>
+              </div>
+              <div  class="w-layout-layout grid-gallery wf-layout-layout">
+                  <div data-aos="fade-right" data-aos-delay="100" id="w-node-_2dcc60f8-8d7e-ac7c-3148-535f0de71c96-6dd935f1" class="w-layout-cell">
+                      <div class="figure _w-h-100"><img  alt="Gallery WindroseUSA" sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 1439px) 95vw, 1220px" srcset="https://charliebrownjs.github.io/windroseusa/assets/services/port-fitness.jpeg 500w, https://charliebrownjs.github.io/windroseusa/assets/services/port-fitness.jpeg 768w" class="fit-cover _w-h-100"></div>
+                  </div>
+                  <div data-aos="fade-left" data-aos-delay="200" id="w-node-_2dcc60f8-8d7e-ac7c-3148-535f0de71c97-6dd935f1" class="w-layout-cell">
+                      <div class="figure _w-h-100"><img alt="Gallery WindroseUSA" sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 1439px) 95vw, 1220px" srcset="https://charliebrownjs.github.io/windroseusa/assets/services/squat-assemb.jpeg 500w, https://charliebrownjs.github.io/windroseusa/assets/services/squat-assemb.jpeg 764w" class="fit-cover _w-h-100"></div>
+                  </div>
+                  <div data-aos="fade-left" data-aos-delay="300" id="w-node-_43f400a6-dbf0-4112-399a-9bd4bfdc4f0c-6dd935f1" class="w-layout-cell">
+                      <div class="figure _w-h-100"><img alt="Gallery WindroseUSA" sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 1439px) 95vw, 1220px" srcset="https://charliebrownjs.github.io/windroseusa/assets/services/squat-assemb2.jpeg 500w, https://charliebrownjs.github.io/windroseusa/assets/services/squat-assemb2.jpeg 764w" class="fit-cover _w-h-100"></div>
+                  </div>
+                  <div data-aos="fade-up" data-aos-delay="400" id="w-node-_3d081ca7-9bb4-869e-4ac9-f77e5f8aaa23-6dd935f1" class="w-layout-cell">
+                      <div class="figure _w-h-100"><img alt="Gallery WindroseUSA" sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 1439px) 95vw, 1220px" srcset="https://charliebrownjs.github.io/windroseusa/assets/services/lands-assemb.jpeg 500w, https://charliebrownjs.github.io/windroseusa/assets/services/lands-assemb.jpeg 800w, https://charliebrownjs.github.io/windroseusa/assets/services/lands-assemb.jpeg 1080w" class="fit-cover _w-h-100"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
     <!-- section services -->
     <section style="background-color: #fff;" class="section pd-0px">
       <div class="inner---section big-size inner-section-services">
@@ -243,10 +501,192 @@
       </div>
     </section>
     <!-- section process -->
-    <section id="process"></section>
-    <footer id="footer"></footer>
+    <section class="section overflow-hidden"> <!-- section -->
+      <div class="w-layout-blockcontainer container-default w-container">
+          <div class="z-index-1">
+              <div class="mg-bottom-26px mg-bottom-26px---mbl">
+                  <div>
+                      <div class="w-layout-hflex flex-horizontal space-between center---tablet">
+                          <div class="inner-container _554px">
+                              <div class="inner-container _500px---tablet">
+                                  <div class="inner-container _400px---mbl center">
+                                      <div class="inner-container _350px---mbl center">
+                                          <div data-aos="fade-up" data-aos-delay="10" class="badge-top-wrapper">
+                                              <div class="badge-top">Our Process</div>
+                                          </div>
+                                          <h2 data-aos="fade-up" data-aos-delay="200" class="heading-h2-size extra-bold mg-bottom-0">Our process is as simple as just picking <span class="text-no-wrap">the phone</span></h2>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div><a data-aos="fade-up" data-aos-delay="300" href="/contact-pages/contact-v1" class="btn-secondary bg-white center---tablet w-button">Book online<span class="line-rounded-icon link-icon-right"></span></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="position-relative">
+          <div class="w-layout-blockcontainer container-default z-index-1 w-container">
+              <div style="border-radius: 24px; padding: 24px 24px 24px 24px; background-color: #ffce51;">
+                  <div class="w-layout-grid grid-3-columns">
+                      <div data-aos="zoom-in" data-aos-delay="100" class="card icon-top-card-v2">
+                          <div class="pd-36px---34px">
+                              <div class="mg-bottom-24px"><img src="https://charliebrownjs.github.io/windroseusa/assets/icons/book-icon.svg" alt="Windroseusa" class="image-size _86px"></div>
+                              <h3 class="heading-h3-size mg-bottom-4px">Get in touch <span class="text-no-wrap">with us</span></h3>
+                              <div class="inner-container _500px---tablet center">
+                                  <p class="mg-bottom-0 color-neutral-800">Proin et convallis tincidunt tincidunt. Viverra ut ullamcorp faucibus dictum. Integer in <span class="text-no-wrap">egestas volutpat.</span></p>
+                              </div>
+                          </div>
+                      </div>
+                      <div data-aos="zoom-in" data-aos-delay="750" class="card icon-top-card-v2">
+                          <div class="pd-36px---34px">
+                              <div class="mg-bottom-24px"><img src="https://charliebrownjs.github.io/windroseusa/assets/icons/arrive-in-1hr-icon.svg" alt="Windroseusa" class="image-size _86px"></div>
+                              <h3 class="heading-h3-size mg-bottom-4px">We arrive within <span class="text-no-wrap">1 Hour</span></h3>
+                              <div class="inner-container _500px---tablet center">
+                                  <p class="mg-bottom-0 color-neutral-800">Proin et convallis tincidunt tincidunt. Viverra ut ullamcorp faucibus dictum. Integer in <span class="text-no-wrap">egestas volutpat.</span></p>
+                              </div>
+                          </div>
+                      </div>
+                      <div data-aos="zoom-in" data-aos-delay="1500" class="card icon-top-card-v2 last">
+                          <div class="pd-36px---34px">
+                              <div class="mg-bottom-24px"><img src="https://charliebrownjs.github.io/windroseusa/assets/icons/solve-your-problem-icon.svg" alt="Windroseusa" class="image-size _86px"></div>
+                              <h3 class="heading-h3-size mg-bottom-4px">We solve <span class="text-no-wrap">your problem</span></h3>
+                              <div class="inner-container _500px---tablet center">
+                                  <p class="mg-bottom-0 color-neutral-800">Proin et convallis tincidunt tincidunt. Viverra ut ullamcorp faucibus dictum. Integer in <span class="text-no-wrap">egestas volutpat.</span></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="shape-wrapper our-process-shape-wrapper"><img src="https://charliebrownjs.github.io/windroseusa/assets/iteration-process.webp" alt="" style="opacity: 0.04;" data-w-id="7ee5f11b-def7-8fdf-c269-144629956fd2" class="shape our-process-shape"></div>
+      </div>
+  </section>
+    <!-- footer section -->
+    <div class="footer-container">
+      <footer class="footer-wrapper">
+          <div  class="cta-footer-wrapper">
+              <div data-aos="zoom-out" class="cta-footer">
+                  <div class="w-layout-grid grid-2-columns cta-footer-grid-2-col">
+                      <div class="inner-container _468px _100-tablet">
+                          <div class="inner-container _350px---mbl center">
+                              <h2 class="heading-h2-size extra-bold mg-bottom-0">Let us work <br>for you today!
+                              </h2>
+                          </div>
+                      </div>
+                      <div class="buttons-row right center---tablet">
+                          
+                              <a class="btn-ra-footer" href="#">Book online<span></span></a>
+                            
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="inner---section big-size footer"
+              style="opacity: 1;">
+              <div class="w-layout-blockcontainer container-default position-relative w-container">
+                  <div class="shape-wrapper footer-shape"><img src="https://charliebrownjs.github.io/windroseusa/assets/wrusa-background.jpg" alt=""
+                          class="shape footer-shape" style="opacity: 0.2;"></div>
+                  <div class="z-index-1">
+                      <div class="mg-bottom-54px">
+                          <div class="w-layout-grid grid-3-columns menu-grid-3-col-wrapper">
+                              <div class="inner-container _356px _100-tablet"
+                                  >
+                                  <div class="inline-block mg-bottom-24px">
+                                      <div class="heading-h3-size color-secondary-3">Menu</div>
+                                  </div>
+                                  <div class="w-layout-grid grid-2-columns menu-subgrid-2-col footer">
+                                      <div>
+                                          <ul role="list" class="menu-list-wrapper">
+                                              <li class="menu-list-item"><a href="#header"
+                                                      class="link color-neutral-300">Home (Sales)</a></li>
+                                              <li class="menu-list-item"><a href="#header"
+                                                      class="link color-neutral-300">Home </a></li>
+                                              <li class="menu-list-item"><a href="#"
+                                                      class="link color-neutral-300">About us</a></li>
+                                              <li class="menu-list-item"><a href="#"
+                                                      class="link color-neutral-300">Services</a></li>
+                                              <li class="menu-list-item"><a href="#"
+                                                      class="link color-neutral-300">Our Process</a></li>
+                                              <li class="menu-list-item"><a href="#"
+                                                      class="link color-neutral-300">Contact </a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="inner-container _200px _100-mbp"
+                                      >
+                                      <div class="inline-block mg-bottom-24px">
+                                          <div class="heading-h3-size color-secondary-3">Services</div>
+                                      </div>
+                                      <ul role="list" class="menu-list-wrapper">
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Computer
+                                                  Help</a></li>
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Decoration</a></li>
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Full
+                                                  Service Help Moving</a></li>
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Furniture
+                                                  Assembly</a></li>
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Help
+                                                  Moving</a></li>
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Smart
+                                                  Home Installation</a></li>
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Truck
+                                                  Assisted Help Moving</a></li>
+                                          <li class="menu-list-item"><a href="#"
+                                                  class="link color-neutral-300">Yard
+                                                  Work</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div
+                                  >
+                                  <div class="inline-block mg-bottom-24px">
+                                      <div class="heading-h3-size color-secondary-3">Contact Us</div>
+                                  </div>
+                                  <div>
+                                      <div class="mg-bottom-48px">
+                                          <div class="mg-bottom-8px">
+                                              <div class="text-200 color-neutral-100">Phone</div>
+                                          </div>
+                                          <div class="display-4"><a href="tel:508-818-7518"
+                                                  class="link bold color-neutral-100">(+1) 508-818-7518</a></div>
+                                      </div>
+                                      <div>
+                                          <div class="mg-bottom-8px">
+                                              <div class="text-200 color-neutral-100">Email</div>
+                                          </div>
+                                          <div class="display-4"><a href="mailto:help@windroseusa.com"
+                                                  class="link bold color-neutral-100">help@windroseusa.com</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="flex-horizontal footer-bottom-flex" style="opacity: 1;"><a href="#"
+                              class="footer-logo-wrapper w-inline-block"><img
+                                  src="https://charliebrownjs.github.io/windroseusa/assets/WindroseUSA_logo_Transparent.png" class="footer-logo"></a>
+                          <div class="color-neutral-100">
+                              <p class="text-100 mg-bottom-0">Copyright ₢ 2024 &copy; <a href="https://dxbr.cloud"
+                                      target="_blank" class="link color-neutral-100">WindroseUSA</a> | All Rights
+                                  Reserved</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
 
-    <script>
+   <!--  <script>
         $(document).ready(function() {
             $("#header").load("header.html");
             $("#hero").load("hero-section.html");
@@ -255,12 +695,13 @@
             $("#process").load("section-process.html");
             $("#footer").load("footer.html");
         });
-    </script>
+    </script>  -->
     <!-- Importação do AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
       </script>
+      <!-- script services icon animation -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           const services = [
@@ -296,5 +737,78 @@
           services.forEach(setHoverEffect);
         });
       </script>
+      <!-- script counter -->
+      <script>
+        $(document).ready(function () {
+          // Seleciona todos os elementos com a classe 'counter' e os armazena em um array
+          var counters = $(".counter").toArray();
+    
+          // Ordena os counters com base no atributo data-count em ordem decrescente
+          counters.sort(function (a, b) {
+            return $(b).attr("data-count") - $(a).attr("data-count");
+          });
+    
+          // Função para iniciar a animação
+          function startAnimation($element, countTo, index) {
+            setTimeout(function () {
+              $({ countNum: $element.text() }).animate(
+                {
+                  countNum: countTo,
+                },
+                {
+                  duration: 3000,
+                  easing: "linear",
+                  step: function () {
+                    $element.text(Math.floor(this.countNum));
+                  },
+                  complete: function () {
+                    $element.text(this.countNum);
+                  },
+                }
+              );
+            }, index * 200); // Atraso de 200 ms entre as animações
+          }
+    
+          // Configura o IntersectionObserver para detectar quando os elementos entram na viewport
+          let observer = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  let $element = $(entry.target),
+                    countTo = $element.attr("data-count");
+    
+                  // Inicia a animação quando o elemento está na viewport
+                  startAnimation($element, countTo, counters.indexOf(entry.target));
+    
+                  // Desconecta o observer para evitar múltiplas animações
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.5 }
+          ); // threshold define 50% do elemento visível
+    
+          // Observa cada contador individualmente
+          counters.forEach((counter) => observer.observe(counter));
+        });
+      </script>
+        <!-- animated footer button -->
+    <script>
+      $(function () {
+        $(".btn-ra-footer")
+          .on("mouseenter", function (e) {
+            var parentOffset = $(this).offset(),
+              relX = e.pageX - parentOffset.left,
+              relY = e.pageY - parentOffset.top;
+            $(this).find("span").css({ top: relY, left: relX });
+          })
+          .on("mouseout", function (e) {
+            var parentOffset = $(this).offset(),
+              relX = e.pageX - parentOffset.left,
+              relY = e.pageY - parentOffset.top;
+            $(this).find("span").css({ top: relY, left: relX });
+          });
+      });
+    </script> 
 </body>
 </html>
