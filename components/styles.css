@@ -762,6 +762,11 @@ textarea.w-select {
 }
 
 @media screen and (max-width: 991px) {
+
+  .page-wrapper {
+    padding-bottom: 0px;
+  }
+
   .w-container {
     max-width: 728px;
   }
@@ -3704,6 +3709,7 @@ figcaption {
 .page-wrapper {
   width: 100%;
   min-height: 100vh;
+  padding-bottom: 22px;
 }
 
 .page-wrapper.flex {
