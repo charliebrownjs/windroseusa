@@ -2134,7 +2134,8 @@ textarea.w-select {
   --button-shadow--white-01: rgba(22, 28, 36, 0.04);
   --button-shadow--white-02: rgba(22, 28, 36, 0.06);
   --button-shadow--white-03: rgba(22, 28, 36, 0.1);
-  --linear-gradient--primary: linear-gradient(90deg,#edf173 0%,#ffce51 100%);
+  --linear-gradient--primary: linear-gradient(180deg,#edf173 0%,#ffce51 100%);
+  --linear-gradient--primary-reverse: linear-gradient(90deg,#edf173 0%,#ffce51 100%);
   
 }
 
@@ -2143,6 +2144,10 @@ textarea.w-select {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.gradient {
+  background: var(--linear-gradient--primary);
 }
 
 .w-layout-grid {
