@@ -5,9 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   margin: 0;
-}
+} 
 
 article,
 aside,
@@ -236,6 +237,7 @@ html {
   height: 100%;
 }
 
+/*
 body {
   min-height: 100%;
   color: #333;
@@ -244,7 +246,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-}
+} */
 
 img {
   max-width: 100%;
@@ -3702,7 +3704,6 @@ figcaption {
 .page-wrapper {
   width: 100%;
   min-height: 100vh;
-  padding-bottom: 22px;
 }
 
 .page-wrapper.flex {
