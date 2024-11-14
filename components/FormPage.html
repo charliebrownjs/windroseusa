@@ -89,17 +89,7 @@
         <div class="w-layout-blockcontainer container-default w-container">
           <div class="inner-container _700px---tablet center">
             <div   class="w-layout-grid grid-2-columns contact-v3-grid-2-col">
-              <div 
-                
-                
-                style="
-                  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                  transform-style: preserve-3d;
-                  opacity: 1;
-                "
-                class="form-container contact-v3-form"
-              >
+              <div style="opacity: 1;" class="form-container contact-v3-form">
                 <div  class="contact-form-v3-block w-form">
                   <form
                     id="wf-form-Contact-V3-Form"
@@ -167,6 +157,26 @@
                           required=""
                         />
                       </div>
+                      <!-- adicione um input select para handyman services -->
+                      <div>
+                        <label for="state" class="color-secondary-1"
+                          >Services</label
+                        >
+                        <div class="input select-wrapper">
+                        <select
+                          id="state"
+                          name="State"
+                          data-name="State"
+                          class=" w-select input select"
+                        >
+                          <option value="Funiture Assembly">Funiture Assembly</option>
+                          <option value="Decoration">Decoration</option>
+                          <option value="Help Moving">Help Moving</option>
+                          <option value="Computer Help">Computer Help</option>
+                          <option value="Gutter Cleaning">Gutter Cleaning</option>
+                        </select></div>
+                      </div>
+
                       <div
                         
                         class="text-area-wrapper"

@@ -3919,7 +3919,7 @@ figcaption {
 
 .grid-2-columns.contact-v3-grid-2-col {
   grid-column-gap: 22px;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr;
   align-items: stretch;
 }
 
@@ -8868,7 +8868,7 @@ figcaption {
 
 .form-container.contact-v3-form {
   width: 100%;
-  max-width: 668px;
+ /* max-width: 668px; */
   background-color: var(--neutral--200);
   border-radius: 24px;
   padding: 55px 40px;
