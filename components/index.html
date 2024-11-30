@@ -404,23 +404,24 @@
   <script>
     $(document).ready(function () {
       const images = [
-        'https://charliebrownjs.github.io/windroseusa/assets/slide/slide1.webp',
-        'https://charliebrownjs.github.io/windroseusa/assets/slide/slide2.webp',
-        'https://charliebrownjs.github.io/windroseusa/assets/slide/slide3.webp',
-        'https://charliebrownjs.github.io/windroseusa/assets/slide/slide4.webp',
-        'https://charliebrownjs.github.io/windroseusa/assets/slide/slide5.webp'
+        '../assets/slide/slide1.webp',
+        '../assets/slide/slide2.webp',
+        '../assets/slide/slide3.webp',
+        '../assets/slide/slide4.webp',
+        '../assets/slide/slide5.webp'
       ];
       let currentIndex = 0;
-
+  
       function changeImage() {
         currentIndex = (currentIndex + 1) % images.length; // Alterna entre os índices
         $('#slide').css('background-image', 'url(' + images[currentIndex] + ')');
       }
-
-      setInterval(changeImage, 3000); // Muda a imagem a cada 2 segundos
+  
+      setInterval(changeImage, 3000); // Muda a imagem a cada 3 segundos
       changeImage(); // Muda a imagem imediatamente ao carregar
     });
   </script>
+  
 </body>
 
 </html>
