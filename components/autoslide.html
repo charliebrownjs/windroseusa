@@ -7,13 +7,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         #slide {
+          width: 100%;
+          height: 120vh;
+          background-size: cover;
+          background-position: center;
+          transition: background-image 1s;
+        }
+    
+        @media only screen and (max-width: 768px) {
+        #slide {
             width: 100%;
-            height: 50vh;
+            height: 100vh;
             background-size: cover;
             background-position: center;
             transition: background-image 1s;
         }
-    </style>
+    }
+    
+        
+      </style>
 </head>
 <body>
     <div id="slide"></div>
