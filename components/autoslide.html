@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,35 +8,36 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         #slide {
-          width: 100%;
-          height: 120vh;
-          background-size: cover;
-          background-position: center;
-          transition: background-image 1s;
-        }
-    
-        @media only screen and (max-width: 768px) {
-        #slide {
             width: 100%;
-            height: 100vh;
+            height: 120vh;
             background-size: cover;
             background-position: center;
             transition: background-image 1s;
         }
-    }
-    
-        
-      </style>
+
+        @media only screen and (max-width: 768px) {
+            #slide {
+                width: 100%;
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+                transition: background-image 1s;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div id="slide"></div>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             const images = [
-                'https://www.pixelstalk.net/wp-content/uploads/2016/07/Full-HD-Wallpaper-1080p-Download.jpg',
-                'https://wallpapercave.com/wp/m1iBkxi.jpg',
-                'http://getwallpapers.com/wallpaper/full/0/6/7/845151-best-1080p-wallpapers-1920x1080-large-resolution.jpg'
+                'https://charliebrownjs.github.io/windroseusa/assets/slide/slide1.webp',
+                'https://charliebrownjs.github.io/windroseusa/assets/slide/slide2.webp',
+                'https://charliebrownjs.github.io/windroseusa/assets/slide/slide3.webp',
+                'https://charliebrownjs.github.io/windroseusa/assets/slide/slide4.webp',
+                'https://charliebrownjs.github.io/windroseusa/assets/slide/slide5.webp'
             ];
             let currentIndex = 0;
 
@@ -48,6 +50,7 @@
             changeImage(); // Muda a imagem imediatamente ao carregar
         });
     </script>
-   
+
 </body>
+
 </html>
