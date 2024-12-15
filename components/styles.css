@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-} 
+}
 
 article,
 aside,
@@ -256,6 +256,16 @@ img {
 
 html.w-mod-touch * {
   background-attachment: scroll !important;
+}
+
+.badblock {
+  background-color: #fff;
+  height: 280px;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  opacity: 1;
 }
 
 .w-block {
@@ -835,6 +845,7 @@ textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+
   .w-hidden-main,
   .w-hidden-medium {
     display: inherit !important;
@@ -908,6 +919,10 @@ textarea.w-select {
 @media screen and (max-width: 479px) {
   .w-container {
     max-width: none;
+  }
+
+  .badblock {
+    height: 200px;
   }
 
   .w-hidden-main,
@@ -995,7 +1010,7 @@ textarea.w-select {
   text-align: center;
 }
 
-.w-widget-map .gm-style-iw > button {
+.w-widget-map .gm-style-iw>button {
   display: none !important;
 }
 
@@ -1069,8 +1084,7 @@ textarea.w-select {
 
 .w-widget-twitter-count-shim:not(.w--vertical):before {
   border-width: 4px;
-  border-color: rgba(117, 134, 150, 0) #5d6c7b rgba(117, 134, 150, 0)
-    rgba(117, 134, 150, 0);
+  border-color: rgba(117, 134, 150, 0) #5d6c7b rgba(117, 134, 150, 0) rgba(117, 134, 150, 0);
   margin-top: -4px;
   margin-left: -9px;
 }
@@ -1083,8 +1097,7 @@ textarea.w-select {
 
 .w-widget-twitter-count-shim:not(.w--vertical):after {
   border-width: 4px;
-  border-color: rgba(255, 255, 255, 0) #fff rgba(255, 255, 255, 0)
-    rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0) #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
   margin-top: -4px;
   margin-left: -8px;
 }
@@ -1141,7 +1154,7 @@ textarea.w-select {
   overflow: hidden;
 }
 
-.w-background-video > video {
+.w-background-video>video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1156,7 +1169,7 @@ textarea.w-select {
   right: -100%;
 }
 
-.w-background-video > video::-webkit-media-controls-start-playback-button {
+.w-background-video>video::-webkit-media-controls-start-playback-button {
   -webkit-appearance: none;
   display: none !important;
 }
@@ -1169,7 +1182,7 @@ textarea.w-select {
   right: 1em;
 }
 
-.w-background-video--control > [hidden] {
+.w-background-video--control>[hidden] {
   display: none !important;
 }
 
@@ -1217,11 +1230,11 @@ textarea.w-select {
   right: 0;
 }
 
-.w-slider-nav.w-round > div {
+.w-slider-nav.w-round>div {
   border-radius: 100%;
 }
 
-.w-slider-nav.w-num > div {
+.w-slider-nav.w-num>div {
   width: auto;
   height: auto;
   font-size: inherit;
@@ -1229,7 +1242,7 @@ textarea.w-select {
   padding: 0.2em 0.5em;
 }
 
-.w-slider-nav.w-shadow > div {
+.w-slider-nav.w-shadow>div {
   box-shadow: 0 0 3px rgba(51, 51, 51, 0.4);
 }
 
@@ -1237,11 +1250,11 @@ textarea.w-select {
   color: #fff;
 }
 
-.w-slider-nav-invert > div {
+.w-slider-nav-invert>div {
   background-color: rgba(34, 34, 34, 0.4);
 }
 
-.w-slider-nav-invert > div.w-active {
+.w-slider-nav-invert>div.w-active {
   background-color: #222;
 }
 
@@ -1720,8 +1733,8 @@ textarea.w-select {
   outline: 2px solid #2895f7;
 }
 
-.w-richtext figure.w-richtext-figure-type-video > div:after,
-.w-richtext figure[data-rt-type="video"] > div:after {
+.w-richtext figure.w-richtext-figure-type-video>div:after,
+.w-richtext figure[data-rt-type="video"]>div:after {
   content: "";
   display: none;
   position: absolute;
@@ -1736,7 +1749,7 @@ textarea.w-select {
   position: relative;
 }
 
-.w-richtext figure > div:before {
+.w-richtext figure>div:before {
   cursor: default !important;
 }
 
@@ -1758,13 +1771,13 @@ textarea.w-select {
   display: table;
 }
 
-.w-richtext figure.w-richtext-figure-type-image > div,
-.w-richtext figure[data-rt-type="image"] > div {
+.w-richtext figure.w-richtext-figure-type-image>div,
+.w-richtext figure[data-rt-type="image"]>div {
   display: inline-block;
 }
 
-.w-richtext figure.w-richtext-figure-type-image > figcaption,
-.w-richtext figure[data-rt-type="image"] > figcaption {
+.w-richtext figure.w-richtext-figure-type-image>figcaption,
+.w-richtext figure[data-rt-type="image"]>figcaption {
   caption-side: bottom;
   display: table-caption;
 }
@@ -1784,8 +1797,8 @@ textarea.w-select {
   left: 0;
 }
 
-.w-richtext figure.w-richtext-figure-type-video > div,
-.w-richtext figure[data-rt-type="video"] > div {
+.w-richtext figure.w-richtext-figure-type-video>div,
+.w-richtext figure[data-rt-type="video"]>div {
   width: 100%;
 }
 
@@ -1795,8 +1808,8 @@ textarea.w-select {
   margin-right: auto;
 }
 
-.w-richtext figure.w-richtext-align-center.w-richtext-figure-type-image > div,
-.w-richtext figure.w-richtext-align-center[data-rt-type="image"] > div {
+.w-richtext figure.w-richtext-align-center.w-richtext-figure-type-image>div,
+.w-richtext figure.w-richtext-align-center[data-rt-type="image"]>div {
   max-width: 100%;
 }
 
@@ -1814,12 +1827,12 @@ textarea.w-select {
   display: block;
 }
 
-.w-richtext figure.w-richtext-align-fullwidth > div {
+.w-richtext figure.w-richtext-align-fullwidth>div {
   padding-bottom: inherit;
   display: inline-block;
 }
 
-.w-richtext figure.w-richtext-align-fullwidth > figcaption {
+.w-richtext figure.w-richtext-align-fullwidth>figcaption {
   display: block;
 }
 
@@ -2134,9 +2147,9 @@ textarea.w-select {
   --button-shadow--white-01: rgba(22, 28, 36, 0.04);
   --button-shadow--white-02: rgba(22, 28, 36, 0.06);
   --button-shadow--white-03: rgba(22, 28, 36, 0.1);
-  --linear-gradient--primary: linear-gradient(180deg,#edf173 0%,#ffce51 100%);
-  --linear-gradient--primary-reverse: linear-gradient(90deg,#edf173 0%,#ffce51 100%);
-  
+  --linear-gradient--primary: linear-gradient(180deg, #edf173 0%, #ffce51 100%);
+  --linear-gradient--primary-reverse: linear-gradient(90deg, #edf173 0%, #ffce51 100%);
+
 }
 
 .w-layout-blockcontainer {
@@ -6630,11 +6643,9 @@ figcaption {
 }
 
 .section.cta-home-pages {
-  background-image: linear-gradient(
-    to bottom,
-    var(--neutral--200) 28%,
-    rgba(247, 249, 252, 0) 28%
-  );
+  background-image: linear-gradient(to bottom,
+      var(--neutral--200) 28%,
+      rgba(247, 249, 252, 0) 28%);
   padding-top: 0;
 }
 
@@ -8868,7 +8879,7 @@ figcaption {
 
 .form-container.contact-v3-form {
   width: 100%;
- /* max-width: 668px; */
+  /* max-width: 668px; */
   background-color: var(--neutral--200);
   border-radius: 24px;
   padding: 55px 40px;
@@ -9273,27 +9284,21 @@ figcaption {
 }
 
 .inner---section-bg-shadow.black {
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.44),
-    rgba(0, 0, 0, 0.44)
-  );
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.44),
+      rgba(0, 0, 0, 0.44));
 }
 
 .inner---section-bg-shadow.black.v1 {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.76) 24%,
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0.76) 24%,
+      rgba(0, 0, 0, 0));
 }
 
 .inner---section-bg-shadow.white {
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    var(--neutral--100) 99%
-  );
+  background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      var(--neutral--100) 99%);
   top: 0%;
   bottom: auto;
   left: auto;
@@ -9319,11 +9324,9 @@ figcaption {
 
 .loading-bar {
   min-height: 8px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--accent--primary-1),
-    var(--accent--primary-1)
-  );
+  background-image: linear-gradient(to bottom,
+      var(--accent--primary-1),
+      var(--accent--primary-1));
   border-radius: 999999px;
 }
 
@@ -9331,11 +9334,9 @@ figcaption {
   z-index: 1111;
   width: 100%;
   height: 6px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--secondary--color-2),
-    var(--secondary--color-2)
-  );
+  background-image: linear-gradient(to bottom,
+      var(--secondary--color-2),
+      var(--secondary--color-2));
   transform-origin: 0%;
   border-radius: 99999px;
   display: block;
@@ -10657,11 +10658,9 @@ figcaption {
   }
 
   .section.cta-home-pages {
-    background-image: linear-gradient(
-      to bottom,
-      var(--neutral--200) 60%,
-      rgba(247, 249, 252, 0) 60%
-    );
+    background-image: linear-gradient(to bottom,
+        var(--neutral--200) 60%,
+        rgba(247, 249, 252, 0) 60%);
   }
 
   .section.hero.v17 {
@@ -11542,22 +11541,18 @@ figcaption {
   }
 
   .inner---section-bg-shadow.black.v1 {
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.76) 40%,
-      rgba(0, 0, 0, 0)
-    );
+    background-image: linear-gradient(to right,
+        rgba(0, 0, 0, 0.76) 40%,
+        rgba(0, 0, 0, 0));
   }
 
   .inner---section-bg-shadow.white.hero-v2 {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(
-      6deg,
-      transparent 58%,
-      rgba(255, 255, 255, 0.73) 75%,
-      var(--neutral--100) 90%
-    );
+    background-image: linear-gradient(6deg,
+        transparent 58%,
+        rgba(255, 255, 255, 0.73) 75%,
+        var(--neutral--100) 90%);
     right: 0%;
   }
 
@@ -15604,6 +15599,7 @@ figcaption {
 }
 
 @media screen and (min-width: 1920px) {
+
   #w-node-_99323b18-47ba-dbbb-99ad-58b58f5171f5-20c0cdaf,
   #w-node-e94f748a-0a6e-3222-8423-586adaf014bb-20c0cdaf,
   #w-node-_2108310f-c67c-8dd0-a46b-8b81dca15333-20c0cdaf,
@@ -15975,8 +15971,8 @@ figcaption {
 
 @font-face {
   font-family: "Social Icons Font";
-  src: url("../assets/fonts/IconsSocialMedia.ttf")
-      format("woff2"), /*
+  src: url("../assets/fonts/IconsSocialMedia.ttf") format("woff2"),
+    /*
     url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd65_social-icon-font.eot")
       format("embedded-opentype"),
     url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd9f_social-icon-font.woff")
@@ -15989,6 +15985,7 @@ figcaption {
   font-style: normal;
   font-display: swap; */
 }
+
 /*
 @font-face {
   font-family: "Line Square Icons";
@@ -16021,21 +16018,16 @@ figcaption {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-} */ 
+} */
 
 /* font here <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet"> */
 @font-face {
   font-family: "Line Rounded Icons";
-  src: url("../assets/icons/line-rounded-icons.woff2")
-      format("woff2"),
-    url("../assets/icons/line-rounded-icons.eot")
-      format("embedded-opentype"),
-    url("../assets/icons/line-rounded-icons.woff")
-      format("woff"),
-    url("../assets/icons/line-rounded-icons.ttf")
-      format("truetype"),
-    url("../assets/icons/line-rounded-icons.svg")
-      format("svg");
+  src: url("../assets/icons/line-rounded-icons.woff2") format("woff2"),
+    url("../assets/icons/line-rounded-icons.eot") format("embedded-opentype"),
+    url("../assets/icons/line-rounded-icons.woff") format("woff"),
+    url("../assets/icons/line-rounded-icons.ttf") format("truetype"),
+    url("../assets/icons/line-rounded-icons.svg") format("svg");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16045,36 +16037,36 @@ figcaption {
 
 @font-face {
   font-family: "UBUNTU";
-  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKkANDJ.woff2")
-    format("woff2");
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKkANDJ.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "UBUNTU";
-  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKkANDJ.woff2")
-    format("woff2");
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhycKkANDJ.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "UBUNTU";
-  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduh8MKkANDJ.woff2")
-    format("woff2");
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduh8MKkANDJ.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "UBUNTU";
-  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhLsWkANDJ.woff2")
-    format("woff2");
+  src: url("https://fonts.gstatic.com/s/librefranklin/v18/jizOREVItHgc8qDIbSTKq4XkRg8T88bjFuXOnduhLsWkANDJ.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
 /* @font-face {
   font-family: 'Handyman X Icon Font';
   src: url('https://assets.website-files.com/649af44cc894b19720c0cd2c/649b5a87e8aca9a63da39105_handyman-x-icon-font.woff') format('woff');
