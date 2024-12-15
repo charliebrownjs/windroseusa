@@ -3259,7 +3259,7 @@ textarea.w-select {
 }
 
 .w-commerce-commerceaddtocartoptionpill.w--ecommerce-pill-disabled {
-  color: #666;
+  color: #777;
   cursor: not-allowed;
   background-color: #e6e6e6;
   border-color: #e6e6e6;
@@ -3310,7 +3310,7 @@ textarea.w-select {
 }
 
 .w-commerce-commerceaddtocartbutton.w--ecommerce-add-to-cart-disabled {
-  color: #666;
+  color: #777;
   cursor: not-allowed;
   background-color: #e6e6e6;
   border-color: #e6e6e6;
@@ -3334,7 +3334,7 @@ textarea.w-select {
 }
 
 .w-commerce-commercebuynowbutton.w--ecommerce-buy-now-disabled {
-  color: #666;
+  color: #918787;
   cursor: not-allowed;
   background-color: #e6e6e6;
   border-color: #e6e6e6;
@@ -9814,7 +9814,7 @@ figcaption {
   max-width: 286px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  color: #666977;
+  color: #777977;
   background-color: #fff;
   border: 1px solid #f0f0f6;
   border-radius: 12px;
@@ -9833,7 +9833,7 @@ figcaption {
 }
 
 .more-templates-badge-wrapper:hover {
-  color: #666977;
+  color: #777977;
 }
 
 .more-templates-logo-wrapper {
