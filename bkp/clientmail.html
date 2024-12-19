@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Confirmation - WindRose USA</title>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #eef2f3;
+      }
+
+      h1 {
+        color: #333333;
+        font-size: 24px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      .header {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid #ffce51;
+      }
+      .logo {
+        width: auto;
+        height: 50px;
+      }
+      .content {
+        padding: 30px 20px;
+        color: #333333;
+        line-height: 1.6;
+      }
+      .highlight {
+        color: #ffce51;
+        font-weight: bold;
+      }
+      .info-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .info-table th {
+        background-color: #ffce51;
+        color: #333333;
+        padding: 10px;
+        text-align: left;
+        border-radius: 8px;
+      }
+      .info-table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      .info-table .icon {
+        color: #ffce51;
+        margin-right: 8px;
+      }
+      .service-id {
+        font-size: 16px;
+        color: #0056b3;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .service-details {
+        background-color: #f7f7f7;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+      }
+      .footer {
+        background-color: #333333;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        border-top: 2px solid #ffce51;
+      }
+      .footer-logo {
+        max-width: 180px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #ffce51;
+        color: #333333;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        margin: 20px 0;
+        transition: background-color 0.3s;
+        text-align: center;
+      }
+
+      .button:hover {
+        background-color: #333333;
+        color: #ffffff;
+      }
+
+      .important-note {
+        border-left: 4px solid #ffce51;
+        padding-left: 15px;
+        margin: 20px 0;
+      }
+      .important-note .icon {
+        color: #ffce51;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div style="display: flex; gap: 8px; align-items: center; justify-content: center;">
+          <img
+            src="https://charliebrownjs.github.io/windroseusa/assets/vertical_whiteBG_default_logo.webp"
+            alt="WindRose USA Logo"
+            class="logo"
+          />
+        </div>
+      </div>
+
+      <div class="content">
+        <h2><i class="fas fa-calendar-check icon"></i>Appointment Confirmation</h2>
+
+        <!-- Highlighted Service ID -->
+        <div class="service-id">
+          <i class="fas fa-id-card icon"></i> Service ID: <span>CEFU2024-12-1911</span>
+        </div>
+
+        <p>Dear John Doe,</p>
+        <p>Your appointment has been successfully confirmed. Below are the details of your service:</p>
+
+        <table class="info-table">
+          <tr>
+            <th colspan="2"><i class="fas fa-user icon"></i> Customer Information</th>
+          </tr>
+          <tr>
+            <td><strong>Name:</strong></td>
+            <td>John Doe</td>
+          </tr>
+          <tr>
+            <td><strong>Phone:</strong></td>
+            <td><i class="fas fa-phone icon"></i>(555) 123-4567</td>
+          </tr>
+          <tr>
+            <td><strong>Email:</strong></td>
+            <td><i class="fas fa-envelope icon"></i>john.doe@example.com</td>
+          </tr>
+        </table>
+
+        <table class="info-table">
+          <tr>
+            <th colspan="2"><i class="fas fa-tools icon"></i> Appointment Details</th>
+          </tr>
+          <tr>
+            <td><strong>Date:</strong></td>
+            <td><i class="fas fa-calendar icon"></i>December 20, 2024</td>
+          </tr>
+          <tr>
+            <td><strong>Time:</strong></td>
+            <td><i class="fas fa-clock icon"></i>10:30 AM</td>
+          </tr>
+          <tr>
+            <td><strong>Service:</strong></td>
+            <td>Electrical Wiring</td>
+          </tr>
+          <tr>
+            <td><strong>Technician:</strong></td>
+            <td><i class="fas fa-user-tie icon"></i>Jonathan Laia</td>
+          </tr>
+          <tr>
+            <td><strong>Cost:</strong></td>
+            <td><i class="fas fa-dollar-sign icon"></i>$350.00</td>
+          </tr>
+        </table>
+
+        <div class="service-details">
+          <h3><i class="fas fa-info-circle icon"></i> Service Details</h3>
+          <p>
+            Electrical wiring repair and inspection for kitchen and living room. Estimated duration: 3 hours.
+          </p>
+        </div>
+
+        <div class="important-note">
+          <h4><i class="fas fa-exclamation-triangle icon"></i> Important Notes:</h4>
+          <ul>
+            <li>Please ensure the area is accessible for the technician.</li>
+            <li>Have any necessary supplies or information ready.</li>
+            <li>If you need to reschedule, inform us 24 hours in advance.</li>
+          </ul>
+        </div>
+
+        <p>
+          To secure your appointment, complete the payment using the link below:
+        </p>
+        <a href="https://example.com/payment?id=12345" class="button">Complete Payment</a>
+
+        <p>
+          If you have any questions or need to reschedule, feel free to contact us.
+        </p>
+
+        <p>
+          Best regards,<br />
+          <span class="highlight">WindRose USA Team</span>
+        </p>
+      </div>
+
+      <div class="footer">
+        <img
+          src="https://charliebrownjs.github.io/windroseusa/assets/WindroseUSA_logo_Transparent.png"
+          alt="Footer Logo"
+          class="footer-logo"
+        />
+        <p>© 2024 WindRose USA. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
