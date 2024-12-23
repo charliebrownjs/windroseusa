@@ -1,222 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Service Appointment Overview - WindRose USA</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #eef2f3;
-      }
 
-      h1 {
-        color: #333333;
-        font-size: 24px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Appointment Overview - WindRose USA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+    }
 
-      .imgur {
-        width: 320px;
-      }
+    h1 {
+      color: #333333;
+      font-size: 24px;
+    }
 
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: #ffffff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-      .header {
-        background-color: #fff;
-        padding: 20px;
-        text-align: center;
-        border-bottom: 2px solid #0056b3;
-      }
-      .logo {
-        width: auto;
-        height: 50px;
-      }
-      .content {
-        padding: 30px 20px;
-        color: #333333;
-        line-height: 1.6;
-      }
-      .highlight {
-        color: #0056b3;
-        font-weight: bold;
-      }
-      .info-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-      }
-      .info-table th {
-        background-color: #0056b3;
-        color: #ffffff;
-        padding: 10px;
-        text-align: left;
-        border-radius: 8px;
-      }
-      .info-table td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-      }
-      .service-id {
-        font-size: 16px;
-        color: #0056b3;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-      .service-details {
-        background-color: #f7f7f7;
-        padding: 15px;
-        border-radius: 5px;
-        margin: 20px 0;
-      }
-      .footer {
-        background-color: #333333;
-        color: #ffffff;
-        padding: 20px;
-        text-align: center;
-        border-top: 2px solid #0056b3;
-      }
-      .footer-logo {
-        max-width: 180px;
-        height: auto;
-        margin-bottom: 10px;
-      }
-      .button {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #0056b3;
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        margin: 20px 0;
-        transition: background-color 0.3s;
-        text-align: center;
-      }
+    .imgur {
+      width: 320px;
+    }
 
-      .button:hover {
-        background-color: #333333;
-      }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
 
-      .important-note {
-        border-left: 4px solid #0056b3;
-        padding-left: 15px;
-        margin: 20px 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <div style="display: flex; gap: 8px; align-items: center; justify-content: center;">
-          <img
-            src="https://charliebrownjs.github.io/windroseusa/assets/vertical_whiteBG_default_logo.webp"
-            alt="WindRose USA Logo"
-            class="logo"
-          />
-        </div>
-      </div>
+    .header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #0056b3;
+    }
 
-      <div class="content">
-        <h2>Service Appointment Overview</h2>
+    .logo {
+      width: auto;
+      height: 50px;
+    }
 
-        <!-- Highlighted Service ID -->
-        <div class="service-id">Service ID: <span>CEFU2024-12-1911</span></div>
+    .content {
+      padding: 30px 20px;
+      color: #333333;
+      line-height: 1.6;
+    }
 
-        <table class="info-table">
-          <tr>
-            <th colspan="2">Customer Information</th>
-          </tr>
-          <tr>
-            <td><strong>Name:</strong></td>
-            <td>John Doe</td>
-          </tr>
-          <tr>
-            <td><strong>Phone:</strong></td>
-            <td>(555) 123-4567</td>
-          </tr>
-          <tr>
-            <td><strong>Email:</strong></td>
-            <td>john.doe@example.com</td>
-          </tr>
-          <tr>
-            <td><strong>Address:</strong></td>
-            <td>123 Main Street, Springfield</td>
-          </tr>
-        </table>
+    .highlight {
+      color: #0056b3;
+      font-weight: bold;
+    }
 
-        <table class="info-table">
-          <tr>
-            <th colspan="2">Appointment Details</th>
-          </tr>
-          <tr>
-            <td><strong>Date:</strong></td>
-            <td>December 20, 2024</td>
-          </tr>
-          <tr>
-            <td><strong>Time:</strong></td>
-            <td>10:30 AM</td>
-          </tr>
-          <tr>
-            <td><strong>Service:</strong></td>
-            <td>Electrical Wiring</td>
-          </tr>
-          <tr>
-            <td><strong>Technician:</strong></td>
-            <td>Jonathan Laia</td>
-          </tr>
-          <tr>
-            <td><strong>Estimated Duration:</strong></td>
-            <td>3 Hours</td>
-          </tr>
-          <tr>
-            <td><strong>Cost:</strong></td>
-            <td>$350.00</td>
-          </tr>
-        </table>
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
 
-        <div class="service-details">
-          <h3>Upload Images</h3>
-          <p>
-            a subtilte here
-          </p>
-          <!-- add a image here -->
-           <div style="display: grid;grid-template-columns: repeat(1, 0.1fr);gap: 10px;justify-content: space-around;">
-           <img class="imgur" src="https://www.lyfemarketing.com/blog/wp-content/uploads/2022/05/5-Clean.jpg">
-           <img class="imgur" src="https://www.lyfemarketing.com/blog/wp-content/uploads/2022/05/5-Clean.jpg">
-           <img class="imgur" src="https://www.lyfemarketing.com/blog/wp-content/uploads/2022/05/5-Clean.jpg"></div>
+    .info-table th {
+      background-color: #0056b3;
+      color: #ffffff;
+      padding: 10px;
+      text-align: left;
+      border-radius: 8px;
+    }
 
-        </div>
+    .info-table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
 
-        <div class="important-note">
-          <h4>Important Notes:</h4>
-          <ul>
-            <li>Customer has pets (2 dogs) on the premises.</li>
-            <li>Ensure tools for wiring replacement are available.</li>
-            <li>Contact the customer if arriving more than 15 minutes late.</li>
-          </ul>
-        </div>
+    .service-id {
+      font-size: 16px;
+      color: #0056b3;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-        <p>
-          Mark the service as completed after finishing the job:
-        </p>
-        <a href="https://example.com/complete?id=CEFU2024-12-1911" class="button">Mark as Completed</a>
-      </div>
+    .service-details {
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
 
-      <div class="footer">
-        <img
-          src="https://charliebrownjs.github.io/windroseusa/assets/WindroseUSA_logo_Transparent.png"
-          alt="Footer Logo"
-          class="footer-logo"
-        />
-        <p>© 2024 WindRose USA. All rights reserved.</p>
+    .footer {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #0056b3;
+    }
+
+    .footer-logo {
+      max-width: 180px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0056b3;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 20px 0;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    .button:hover {
+      background-color: #333333;
+    }
+
+    .important-note {
+      border-left: 4px solid #0056b3;
+      padding-left: 15px;
+      margin: 20px 0;
+    }
+
+    /* Subtitle Styling */
+    .subtitle {
+      font-size: 14px;
+      color: #555555;
+      margin-bottom: 10px;
+    }
+
+    /* Grid for Images */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div style="display: flex; gap: 8px; align-items: center; justify-content: center;">
+        <img src="https://charliebrownjs.github.io/windroseusa/assets/vertical_whiteBG_default_logo.webp"
+          alt="WindRose USA Logo" class="logo" />
       </div>
     </div>
-  </body>
+
+    <div class="content">
+      <h2>Service Appointment Overview</h2>
+
+      <!-- Highlighted Service ID -->
+      <div class="service-id">Service ID: <span>CEFU2024-12-1911</span></div>
+
+      <table class="info-table">
+        <tr>
+          <th colspan="2">Customer Information</th>
+        </tr>
+        <tr>
+          <td><strong>Name:</strong></td>
+          <td>John Doe</td>
+        </tr>
+        <tr>
+          <td><strong>Phone:</strong></td>
+          <td>(555) 123-4567</td>
+        </tr>
+        <tr>
+          <td><strong>Email:</strong></td>
+          <td>john.doe@example.com</td>
+        </tr>
+        <tr>
+          <td><strong>Address:</strong></td>
+          <td>123 Main Street, Springfield</td>
+        </tr>
+      </table>
+
+      <table class="info-table">
+        <tr>
+          <th colspan="2">Appointment Details</th>
+        </tr>
+        <tr>
+          <td><strong>Date:</strong></td>
+          <td>December 20, 2024</td>
+        </tr>
+        <tr>
+          <td><strong>Time:</strong></td>
+          <td>10:30 AM</td>
+        </tr>
+        <tr>
+          <td><strong>Service:</strong></td>
+          <td>Electrical Wiring</td>
+        </tr>
+        <tr>
+          <td><strong>Technician:</strong></td>
+          <td>Jonathan Laia</td>
+        </tr>
+        <tr>
+          <td><strong>Estimated Duration:</strong></td>
+          <td>3 Hours</td>
+        </tr>
+        <tr>
+          <td><strong>Cost:</strong></td>
+          <td>$350.00</td>
+        </tr>
+      </table>
+
+      <div class="service-details">
+        <h3>Attached Images</h3>
+        <p class="subtitle">Here are the images related to the service for your reference.</p>
+
+        <!-- Image Grid -->
+        <div class="image-grid">
+          <img class="imgur" src="https://www.lyfemarketing.com/blog/wp-content/uploads/2022/05/5-Clean.jpg"
+            alt="Clean organized space example 1" />
+          <img class="imgur" src="https://www.lyfemarketing.com/blog/wp-content/uploads/2022/05/5-Clean.jpg"
+            alt="Clean organized space example 2" />
+          <img class="imgur" src="https://www.lyfemarketing.com/blog/wp-content/uploads/2022/05/5-Clean.jpg"
+            alt="Clean organized space example 3" />
+        </div>
+      </div>
+
+
+      <div class="important-note">
+        <h4>Important Notes:</h4>
+        <ul>
+          <li>Customer has pets (2 dogs) on the premises.</li>
+          <li>Ensure tools for wiring replacement are available.</li>
+          <li>Contact the customer if arriving more than 15 minutes late.</li>
+        </ul>
+      </div>
+
+      <p>
+        Mark the service as completed after finishing the job:
+      </p>
+      <a href="https://example.com/complete?id=CEFU2024-12-1911" class="button">Mark as Completed</a>
+    </div>
+
+    <div class="footer">
+      <img src="https://charliebrownjs.github.io/windroseusa/assets/WindroseUSA_logo_Transparent.png" alt="Footer Logo"
+        class="footer-logo" />
+      <p>© 2024 WindRose USA. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+
 </html>
