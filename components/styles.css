@@ -260,7 +260,7 @@ html.w-mod-touch * {
 
 .badblock {
   background-color: #fff;
-  height: 280px;
+  height: 320px;
   width: 100%;
   position: absolute;
   z-index: 1000;
@@ -922,7 +922,7 @@ textarea.w-select {
   }
 
   .badblock {
-    height: 200px;
+    height: 220px;
   }
 
   .w-hidden-main,
