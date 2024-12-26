@@ -6121,7 +6121,7 @@ figcaption {
 .checkbox.w--redirected-checked {
   border-color: var(--accent--primary-1);
   background-color: var(--accent--primary-1);
-  background-image: url("../assets/icons/check-form.svg");
+  background-image: url("assets/icons/check-form.svg");
   background-size: auto;
   margin-top: 0;
   margin-left: 0;
@@ -15971,7 +15971,7 @@ figcaption {
 
 @font-face {
   font-family: "Social Icons Font";
-  src: url("../assets/fonts/IconsSocialMedia.ttf") format("woff2"),
+  src: url("assets/fonts/IconsSocialMedia.ttf") format("woff2"),
     /*
     url("https://assets.website-files.com/649af44cc894b19720c0cd2c/649af44cc894b19720c0cd65_social-icon-font.eot")
       format("embedded-opentype"),
@@ -16023,11 +16023,11 @@ figcaption {
 /* font here <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet"> */
 @font-face {
   font-family: "Line Rounded Icons";
-  src: url("../assets/icons/line-rounded-icons.woff2") format("woff2"),
-    url("../assets/icons/line-rounded-icons.eot") format("embedded-opentype"),
-    url("../assets/icons/line-rounded-icons.woff") format("woff"),
-    url("../assets/icons/line-rounded-icons.ttf") format("truetype"),
-    url("../assets/icons/line-rounded-icons.svg") format("svg");
+  src: url("assets/icons/line-rounded-icons.woff2") format("woff2"),
+    url("assets/icons/line-rounded-icons.eot") format("embedded-opentype"),
+    url("assets/icons/line-rounded-icons.woff") format("woff"),
+    url("assets/icons/line-rounded-icons.ttf") format("truetype"),
+    url("assets/icons/line-rounded-icons.svg") format("svg");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
