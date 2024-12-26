@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Footer Component</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+          
+        :root {
+          --btn-ra-width: 250px;
+          --btn-ra-height: 80px;
+          --btn-ra-color: #101223;
+          --btn-ra-color-dark: #ffce51;
+          --btn-ra-color-tint: #fff;
+        }
+  
+        a {
+          text-decoration: none;
+        }
+  
+        .centerer {
+          width: 50%;
+          max-width: 600px;
+          margin-left: 0;
+          margin-right: auto;
+          padding: 0 0rem;
+        }
+
+        .centerer-flex {
+          display: flex;
+          justify-content: start;
+          align-items: start;
+        }
+  
+        .btn-ra-footer {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          max-width: var(--btn-ra-width);
+          height: var(--btn-ra-height);
+          margin: 1rem auto;
+          text-align: center;
+          border: 1px solid currentColor;
+          color: var(--btn-ra-color);
+          border-radius: 16px;
+          line-height: var(--btn-ra-height);
+        }
+  
+        .btn-ra-footer span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background-color: var(--btn-ra-color);
+          transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+  
+        .btn-ra-footer:hover {
+          color: var(--btn-ra-color-tint);
+          border-color: var(--btn-ra-color-dark);
+        }
+  
+        .btn-ra-footer:hover span {
+          width: 225%;
+          height: calc(var(--btn-ra-width) * 2.25);
+        }
+  
+        .btn-ra-footer:active {
+          background-color: var(--btn-ra-color);
+        }
+      </style>
+</head>
+
+<body>
+    <!-- Footer -->
+    <div class="page-wrapper"> <!-- page wrapper -->
+        <div class="footer-container">
+            <footer class="footer-wrapper overflow-hidden-mbp">
+                <div  class="cta-footer-wrapper">
+                    <div data-aos="zoom-in" class="cta-footer">
+                        <div class="w-layout-grid grid-2-columns cta-footer-grid-2-col">
+                            <div class="inner-container _468px _100-tablet">
+                                <div class="inner-container _350px---mbl center">
+                                    <h2 class="heading-h2-size extra-bold mg-bottom-0">Let us work <br>for you today!
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="buttons-row right center---tablet">
+                                
+                                    <a class="btn-ra-footer" href="https://app.windroseusa.com" target="_blank" >Book online<span></span></a>
+                                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner---section big-size footer"
+                    style="opacity: 1;">
+                    <div class="w-layout-blockcontainer container-default position-relative w-container">
+                        <div class="shape-wrapper footer-shape"><img src="https://charliebrownjs.github.io/windroseusa/assets/wrusa-background.jpg" alt=""
+                                class="shape footer-shape" style="opacity: 0.2;"></div>
+                        <div class="z-index-1">
+                            <div class="mg-bottom-54px">
+                                <div class="w-layout-grid grid-3-columns menu-grid-3-col-wrapper">
+                                    <div class="inner-container _356px _100-tablet"
+                                        >
+                                        <div class="inline-block mg-bottom-24px">
+                                            <div class="heading-h3-size color-secondary-3">Menu</div>
+                                        </div>
+                                        <div class="w-layout-grid grid-2-columns menu-subgrid-2-col footer">
+                                            <div>
+                                                <ul role="list" class="menu-list-wrapper">
+                                                    <li class="menu-list-item"><a href="#header"
+                                                            class="link color-neutral-300">Home (Sales)</a></li>
+                                                    <li class="menu-list-item"><a href="#header"
+                                                            class="link color-neutral-300">Home </a></li>
+                                                    <li class="menu-list-item"><a href="#"
+                                                            class="link color-neutral-300">About us</a></li>
+                                                    <li class="menu-list-item"><a href="#"
+                                                            class="link color-neutral-300">Services</a></li>
+                                                    <li class="menu-list-item"><a href="#"
+                                                            class="link color-neutral-300">Our Process</a></li>
+                                                    <li class="menu-list-item"><a href="#"
+                                                            class="link color-neutral-300">Contact </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="inner-container _200px _100-mbp"
+                                            >
+                                            <div class="inline-block mg-bottom-24px">
+                                                <div class="heading-h3-size color-secondary-3">Services</div>
+                                            </div>
+                                            <ul role="list" class="menu-list-wrapper">
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Computer
+                                                        Help</a></li>
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Decoration</a></li>
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Full
+                                                        Service Help Moving</a></li>
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Furniture
+                                                        Assembly</a></li>
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Help
+                                                        Moving</a></li>
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Smart
+                                                        Home Installation</a></li>
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Truck
+                                                        Assisted Help Moving</a></li>
+                                                <li class="menu-list-item"><a href="#"
+                                                        class="link color-neutral-300">Yard
+                                                        Work</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div
+                                        >
+                                        <div class="inline-block mg-bottom-24px">
+                                            <div class="heading-h3-size color-secondary-3">Contact Us</div>
+                                        </div>
+                                        <div>
+                                            <div class="mg-bottom-48px">
+                                                <div class="mg-bottom-8px">
+                                                    <div class="text-200 color-neutral-100">Phone</div>
+                                                </div>
+                                                <div class="display-4"><a href="tel:508-818-7518"
+                                                        class="link bold color-neutral-100">(+1) 508-818-7518</a></div>
+                                            </div>
+                                            <div>
+                                                <div class="mg-bottom-8px">
+                                                    <div class="text-200 color-neutral-100">Email</div>
+                                                </div>
+                                                <div class="display-4"><a href="mailto:help@windroseusa.com"
+                                                        class="link bold color-neutral-100">help@windroseusa.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-horizontal footer-bottom-flex" style="opacity: 1;"><a href="#" class="footer-logo-wrapper w-inline-block"><img
+                                        src="https://charliebrownjs.github.io/windroseusa/assets/WindroseUSA_logo_Transparent.png" class="footer-logo"></a>
+                                <div class="color-neutral-100">
+                                    <p class="text-100 mg-bottom-0">Copyright ₢ 2024 &copy; <a href="https://dxbr.cloud"
+                                            target="_blank" class="link color-neutral-100">WindroseUSA</a> | All Rights
+                                        Reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div> <!-- End Footer -->
+    <!-- animated button -->
+    <script>
+        $(function () {
+          $(".btn-ra-footer")
+            .on("mouseenter", function (e) {
+              var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+              $(this).find("span").css({ top: relY, left: relX });
+            })
+            .on("mouseout", function (e) {
+              var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+              $(this).find("span").css({ top: relY, left: relX });
+            });
+        });
+      </script> 
+    <!-- Importação do AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+
+</html>
