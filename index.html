@@ -1,56 +1,547 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagina em Construção</title>
-  </head>
+<html lang="pt-BR">
 
-  <body>
-    <style>
-      body {
-        text-align: center;
-        color: black;
-        background-color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+<head>
+  <meta charset="UTF-8" />
+  <meta property="og:image"
+    content="https://charliebrownjs.github.io/windroseusa/components/assets/background_wrusa.png" />
+  <meta property="og:title" content="WindroseUSA.com | Handyman Contractor Services " />
+  <meta property="og:description"
+    content="Smart Home Services, Furniture Assembly, IT Services / Network, Decoration, Gutter Cleaning, Moving Help" />
+  <meta property="og:url" content="https://windroseusa.com/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>WindroseUSA.com | Handyman Contractor Services</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    #slide {
+      width: 100%;
+      height: 120vh;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s;
+    }
+
+    @media only screen and (max-width: 768px) {
+    #slide {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s;
+    }
+  }
+
+    @media only screen and (max-width: 462px) {
+    #slide {
+        width: 100%;
+        
+        background-size: cover;
+        background-position: center;
+        transition: background-image .4s;
+    }
+  }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
       }
 
-      img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+      50% {
+        transform: scale(1.2);
       }
 
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      100% {
+        transform: scale(1);
       }
+    }
 
-      .image-container {
-        max-width: 300px;
-        height: auto;
-        background-color: tomato;
+    .pulse-animation {
+      animation: pulse 0.5s ease-in-out;
+      animation-iteration-count: 1;
+    }
+  </style>
+  <!-- Loagind -->
+  <!--    <style>
+      #loading {
+          display: none;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1000; /* Garante que fique acima de outros elementos */
+          background-color: white;
       }
+  </style> -->
+</head>
 
-      .img-gif {
-       border-radius: 24px;
-       
-       padding-top: 24px;
-      }
-    </style>
-    <div class="wrapper">
-      <h1>Pagina em Construção</h1>
-      <p>Em breve estaremos em operação.</p>
-      <div class="image-container">
-        <img
-          style="width: 100%"
-          src="/windroseusa/assets/git-construction.gif"
-          alt="Em construção"
-        />
+<body>
+  
+<!-- Start of OpenWidget (www.openwidget.com) code 
+<script>
+  window.__ow = window.__ow || {};
+  window.__ow.organizationId = "a54b251a-02d1-493e-b17f-78f5a9f160be";
+  window.__ow.integration_name = "manual_settings";
+  window.__ow.product_name = "openwidget";   
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+</script>
+<noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/" rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+ End of OpenWidget code -->
+
+  <div class="page-wrapper">
+    <section id="header"></section>
+    <section id="hero"></section>
+    <section id="about"></section>
+    <!-- section services -->
+    <section style="background-color: #fff" class="section pd-0px">
+      <div class="inner---section big-size inner-section-services">
+        <div class="half-bg-top half-bg-why-us">
+          <div class="bg-floating why-us"></div>
+        </div>
+        <div class="container-default">
+          <div>
+            <div class="mg-bottom-40px">
+              <div class="w-layout-vflex flex-vertical center text-center">
+                <div id="Services-Section" class="badge-top-wrapper">
+                  <div class="badge-top">Services</div>
+                </div>
+                <div class="inner-container _402px center">
+                  <div class="inner-container _350px---tablet center">
+                    <div class="inner-container _250px---mbl">
+                      <h2 class="heading-h2-size extra-bold mg-bottom-4px">
+                        Most Popular
+                        <span class="text-no-wrap">Services</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-container _504px center">
+                  <div class="inner-container _450px---mbl">
+                    <p class="mg-bottom-0">
+                      Services available for a minimum of 2 hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="grid-2-columns">
+                <div class="container-default" role="tablist">
+                  <div class="overflow-hidden-mbp">
+                    <div data-aos="zoom-out">
+                      <a id="smart-home-button" class="tab-left-icon w-inline-block w-tab-link" href="#" role="tab"
+                        aria-controls="w-tabs-0-data-w-pane-0" aria-selected="true">
+                        <div class="mg-right-16px">
+                          <div class="flex-vertical center">
+                            <!-- Carrega a imagem estática inicialmente -->
+                            <img id="smart-home-icon" alt="Smart Home Icon" src="../assets/gif/smart-home-static.png"
+                              class="image-size" width="85px" />
+                          </div>
+                        </div>
+                        <div>
+                          <div>Smart Home Services</div>
+                          <p style="
+                                font-weight: 300;
+                                font-size: 12px;
+                                max-width: 300px;
+                                margin-top: 0px;
+                                line-height: 1.4;
+                              " class="subserbutton">
+                            Offering efficient smart home installations,
+                            including Ring Doorbells, cameras, smart lights,
+                            WiFi speakers, SONOS, Google Home, Alexa, and
+                            more.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="overflow-hidden-mbp">
+                    <div data-aos="zoom-out">
+                      <a id="furniture-assembly-button" class="tab-left-icon w-inline-block w-tab-link" href="#"
+                        role="tab" aria-controls="w-tabs-0-data-w-pane-0" aria-selected="true">
+                        <div class="mg-right-16px">
+                          <div class="flex-vertical center">
+                            <!-- Carrega a imagem estática inicialmente -->
+                            <img id="furniture-assembly-icon" alt="Furniture Assembly Icon"
+                              src="../assets/gif/furniture-static.png" class="image-size" width="85px" />
+                          </div>
+                        </div>
+                        <div>
+                          <div>Furniture Assembly</div>
+                          <p style="
+                                font-weight: 300;
+                                font-size: 12px;
+                                max-width: 300px;
+                                margin-top: 0px;
+                                line-height: 1.4;
+                              " class="subserbutton">
+                            Our furniture assembly professionals have the
+                            experience and tools needed to assemble your
+                            furniture quickly and inexpensively.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!--  first tab -->
+                  <!-- second tab -->
+                  <div class="overflow-hidden-mbp">
+                    <div data-aos="zoom-out">
+                      <a id="computer-help-button" class="tab-left-icon w-inline-block w-tab-link" href="#" role="tab"
+                        aria-controls="w-tabs-0-data-w-pane-1" aria-selected="false">
+                        <div class="mg-right-16px">
+                          <div class="flex-vertical center">
+                            <!-- Carrega a imagem estática inicialmente -->
+                            <img id="computer-help-icon" alt="computer-help Icon"
+                              src="../assets/gif/computer-help-static.png" class="image-size" width="85px" />
+                          </div>
+                        </div>
+                        <div>
+                          <div>IT Services / Network</div>
+                          <p style="
+                                font-weight: 300;
+                                font-size: 12px;
+                                max-width: 300px;
+                                margin-top: 0px;
+                                line-height: 1.4;
+                              " class="subserbutton">
+                            Our IT support service offers many benefits
+                            designed to free you from the necessary but
+                            time-consuming tasks of setting up your own IT.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- third tab -->
+                <div class="container-default" role="tablist">
+                  <div class="overflow-hidden-mbp">
+                    <div data-aos="zoom-out" data-aos-delay="200">
+                      <a id="decoration-button" class="tab-left-icon w-inline-block w-tab-link" href="#" role="tab"
+                        aria-controls="w-tabs-0-data-w-pane-0" aria-selected="true">
+                        <div class="mg-right-16px">
+                          <div class="flex-vertical center">
+                            <!-- Carrega a imagem estática inicialmente -->
+                            <img id="decoration-icon" alt="decoration Icon" src="../assets/gif/decoration-static.png"
+                              class="image-size" width="85px" />
+                          </div>
+                        </div>
+                        <div>
+                          <div>Decoration</div>
+                          <p style="
+                                font-weight: 300;
+                                font-size: 12px;
+                                max-width: 300px;
+                                margin-top: 0px;
+                                line-height: 1.4;
+                              " class="subserbutton">
+                            Providing ladders and other equipment, I deliver
+                            agile, high-quality event decoration services for
+                            special occasions.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- fourth tab -->
+                  <div class="overflow-hidden-mbp">
+                    <div data-aos="zoom-out" data-aos-delay="200">
+                      <a id="gutter-cleaning-button" class="tab-left-icon w-inline-block w-tab-link" href="#" role="tab"
+                        aria-controls="w-tabs-0-data-w-pane-0" aria-selected="true">
+                        <div class="mg-right-16px">
+                          <div class="flex-vertical center">
+                            <!-- Carrega a imagem estática inicialmente -->
+                            <img id="gutter-cleaning-icon" alt="Gutter Cleaning Icon"
+                              src="../assets/gif/gutter-cleaning-static.png" class="image-size" width="85px" />
+                          </div>
+                        </div>
+                        <div>
+                          <div>Gutter Cleaning</div>
+                          <p style="
+                                font-weight: 300;
+                                font-size: 12px;
+                                max-width: 300px;
+                                margin-top: 0px;
+                                line-height: 1.4;
+                              " class="subserbutton">
+                            To ensure water properly runs away from your home,
+                            we do all the dirty work so you don't have to.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- fifth tab -->
+                  <div class="overflow-hidden-mbp">
+                    <div data-aos="zoom-out" data-aos-delay="200">
+                      <a id="moving-help-button" class="tab-left-icon w-inline-block w-tab-link" href="#" role="tab"
+                        aria-controls="w-tabs-0-data-w-pane-0" aria-selected="true">
+                        <div class="mg-right-16px">
+                          <div class="flex-vertical center">
+                            <!-- Carrega a imagem estática inicialmente -->
+
+                            <img id="moving-help-icon" alt="Moving Help Icon" src="../assets/gif/moving-help-static.png"
+                              class="image-size" width="85px" />
+                          </div>
+                        </div>
+                        <div>
+                          <div>Help Moving</div>
+                          <p style="
+                                font-weight: 300;
+                                font-size: 12px;
+                                max-width: 300px;
+                                margin-top: 0px;
+                                line-height: 1.4;
+                              " class="subserbutton">
+                            Moving locally has never been easier. Full and
+                            partial packing services are available to help
+                            pack all your belongings or just a portion of your
+                            items.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- sixth tab -->
+              <div class="mg-top-40px">
+                <div class="w-layout-hflex flex-horizontal">
+                  <a href="https://app.windroseusa.com" class="btn-primary w-button">Book Online<span
+                      class="line-rounded-icon link-icon-right"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- container -->
+        </div>
       </div>
-      <div class="img-gif"><img style="border-radius: 24px;" src="/assets/git-construction.gif" alt=""></div>
+    </section>
+    <!-- section process -->
+    <section id="process"></section>
+    <section style="position: relative; background-color: #fff;" class="section overflow-hidden">
+      <!-- section -->
+       <div class="badblock"></div>
+      <div class="w-layout-blockcontainer container-default w-container">
+        <div class="z-index-1">
+          <div class="mg-bottom-26px mg-bottom-26px---mbl">
+            <div>
+              <div
+                class="w-layout-hflex flex-horizontal space-between center---tablet"
+              >
+                <div class="inner-container _554px">
+                  <div class="inner-container _500px---tablet">
+                    <div class="inner-container _400px---mbl center">
+                      <div class="inner-container _350px---mbl center">
+                        <div
+                          data-aos="fade-up"
+                          data-aos-delay="10"
+                          class="badge-top-wrapper"
+                        >
+                          <div class="badge-top">Reviews</div>
+                        </div>
+                        <h2
+                          data-aos="fade-up"
+                          data-aos-delay="200"
+                          class="heading-h2-size extra-bold mg-bottom-0"
+                        >
+                        We are not just providing services, but creating long-term relationships with a client.
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  href="https://search.google.com/local/writereview?placeid=ChIJBe1MA7lz5IkR2MxXNwNjWVk"
+                  class="btn-secondary bg-white center---tablet w-button"
+                  >Write a review<span class="line-rounded-icon link-icon-right"
+                    ></span
+                  ></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div  class="position-relative">
+        <div
+          class="w-layout-blockcontainer container-default z-index-1 w-container"
+        >
+          <div
+            style="
+              border-radius: 24px;
+              padding: 24px 24px 24px 24px;
+              background-color: #fff;
+              border-color: black;
+            "
+          >
+          <div id="shapo-widget-f68357600c657dbc0e2b"></div>
+<script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
+          </div>
+        </div>
+        <div class="shape-wrapper our-process-shape-wrapper">
+          <img
+            src="#"
+            alt=""
+            style="opacity: 0.04"
+            data-w-id="7ee5f11b-def7-8fdf-c269-144629956fd2"
+            class="shape our-process-shape"
+          />
+        </div>
+      </div>
+    </section>
+  
+    <footer id="footer"></footer>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $("#header").load("header.html");
+      $("#hero").load("hero-section.html");
+      $("#about").load("section-about.html");
+      /* $("#services").load("section-services01.html"); */
+      $("#process").load("section-process.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <!-- Importação do AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const services = [
+        {
+          buttonId: "furniture-assembly-button",
+          iconId: "furniture-assembly-icon",
+          staticSrc: "../assets/gif/furniture-static.png",
+          gifSrc: "../assets/gif/furniture-anim.gif",
+        },
+        {
+          buttonId: "computer-help-button",
+          iconId: "computer-help-icon",
+          staticSrc: "../assets/gif/computer-help-static.png",
+          gifSrc: "../assets/gif/computer-help-anim.gif",
+        },
+        {
+          buttonId: "decoration-button",
+          iconId: "decoration-icon",
+          staticSrc: "../assets/gif/decoration-static.png",
+          gifSrc: "../assets/gif/decoration-anim.gif",
+        },
+        {
+          buttonId: "gutter-cleaning-button",
+          iconId: "gutter-cleaning-icon",
+          staticSrc: "../assets/gif/gutter-cleaning-static.png",
+          gifSrc: "../assets/gif/gutter-cleaning-anim.gif",
+        },
+        {
+          buttonId: "moving-help-button",
+          iconId: "moving-help-icon",
+          staticSrc: "../assets/gif/moving-help-static.png",
+          gifSrc: "../assets/gif/moving-help-anim.gif",
+        },
+        {
+          buttonId: "smart-home-button",
+          iconId: "smart-home-icon",
+          staticSrc: "../assets/gif/smart-home-static.png",
+          gifSrc: "../assets/gif/smart-home-anim.gif",
+        },
+        // Adicione outras entradas aqui para os demais ícones
+      ];
+
+      function setHoverEffect({ buttonId, iconId, staticSrc, gifSrc }) {
+        const button = document.getElementById(buttonId);
+        const icon = document.getElementById(iconId);
+
+        button.addEventListener("mouseenter", function () {
+          if (icon.src !== window.location.origin + gifSrc) {
+            icon.src = gifSrc;
+            icon.classList.add("pulse-animation");
+          }
+        });
+
+        button.addEventListener("mouseleave", function () {
+          if (icon.src !== window.location.origin + staticSrc) {
+            icon.src = staticSrc;
+            icon.classList.remove("pulse-animation");
+          }
+        });
+      }
+
+      // Aplicar o efeito de hover para cada serviço
+      services.forEach(setHoverEffect);
+    });
+  </script>
+  <!-- preload 
+      <div id="loading">
+        <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;" >
+        <img src="../assets/gif/loading.gif" alt="Carregando...">
+        </div>
+        
     </div>
-  </body>
+    <script>
+      $(window).on('load', function() {
+          $('#loading').fadeOut(); // Esconde a logo quando a página estiver completamente carregada
+      }); 
+      
+      $(document).ready(function() {
+          $('#loading').show(); // Mostra a logo assim que o DOM estiver pronto
+      });
+      </script> -->
+
+  <!-- AUTOSLIDE -->
+  <script>
+    $(document).ready(function () {
+        const images = [
+            '../assets/slide/mslide1.webp',  // Imagem 1 para telas pequenas
+            '../assets/slide/mslide2.webp',  // Imagem 2 para telas pequenas
+            '../assets/slide/mslide3.webp',  // Imagem 3 para telas pequenas
+            '../assets/slide/mslide4.webp',  // Imagem 2 para telas pequenas
+            '../assets/slide/mslide5.webp',  // Imagem 3 para telas pequenas
+            '../assets/slide/slide1.webp',    // Imagem 1 para telas grandes
+            '../assets/slide/slide2.webp',    // Imagem 2 para telas grandes
+            '../assets/slide/slide3.webp',     // Imagem 3 para telas grandes
+            '../assets/slide/slide4.webp',  // Imagem 2 para telas pequenas
+            '../assets/slide/slide5.webp'  // Imagem 3 para telas pequenas
+
+        ];
+
+        let currentIndex = 0;
+
+        // Função para determinar qual imagem usar com base na largura da tela
+        function getImageBasedOnScreenSize() {
+            const width = $(window).width();
+            return width < 462 ? images[currentIndex] : images[currentIndex + 5]; // Menos de 900px usa a imagem small
+        }
+
+        function changeImage() {
+            const imageUrl = getImageBasedOnScreenSize();
+            $('#slide').css({
+                'background-image': 'url(' + imageUrl + ')',
+                'background-size': 'cover',   // Para cobrir todo o espaço do slide
+                'background-position': 'center', // Centraliza a imagem no slide
+                'width': '100vw'               // Define a largura como 100% da viewport para telas pequenas
+            });
+            currentIndex = (currentIndex + 1) % 5; // Muda o índice, reiniciando após a última imagem
+        }
+
+        setInterval(changeImage, 3000); // Muda a imagem a cada 3 segundos
+        changeImage(); // Muda a imagem imediatamente ao carregar
+
+        // Atualiza a imagem quando a janela é redimensionada
+        $(window).resize(function() {
+            changeImage();
+        });
+    });
+</script>
+  
+</body>
+
 </html>
