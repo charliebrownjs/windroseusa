@@ -7413,6 +7413,11 @@ figcaption {
   height: 100%;
 }
 
+._w-h-50 {
+  width: 50%;
+  height: auto;
+}
+
 ._w-h-100.fit-cover.grow {
   flex: 1;
 }
