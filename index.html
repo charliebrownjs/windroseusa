@@ -77,7 +77,38 @@
 </head>
 
 <body>
-  
+  <div id="promo-banner" style="background-color: #ffcc00; padding: 10px; text-align: center; font-size: 14px; font-weight: bold; animation: slideIn 1s ease-in-out, colorChange 10s infinite;">
+    🎉 "Seasonal Promo: Enjoy 20% off all services! Exclusive offer for app bookings." 🎉
+  </div>
+
+  <style>
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: #ffcc00;
+      }
+      25% {
+        background-color: #ffdd33;
+      }
+      50% {
+        background-color: #ffee66;
+      }
+      75% {
+        background-color: #ffdd33;
+      }
+      100% {
+        background-color: #ffcc00;
+      }
+    }
+  </style>
 <!-- Start of OpenWidget (www.openwidget.com) code 
 <script>
   window.__ow = window.__ow || {};
