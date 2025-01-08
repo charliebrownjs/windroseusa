@@ -6633,8 +6633,8 @@ figcaption {
 }
 
 .section {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .section.pd-100px {
@@ -9105,7 +9105,7 @@ figcaption {
   border-radius: 24px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
+  padding-top: 60px;
   padding-bottom: 200px;
   position: relative;
   overflow: hidden;
