@@ -6,99 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Slideshow de imagens WindRose USA" />
   <title>Auto Slide com Imagens</title>
-  <style>
-    .slide-container {
-      max-width: 900px;
-      position: relative;
-      height: 80vh;
-      overflow: hidden;
-    }
-
-    .slide {
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      transition: background-image 0.5s ease-in-out;
-      position: relative;
-    }
-
-    .slide-controls {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-      z-index: 2;
-    }
-
-    .slide-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      border: none;
-      padding: 0;
-    }
-
-    .slide-dot.active {
-      background: #fff;
-    }
-
-    .slide-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 1rem;
-      cursor: pointer;
-      z-index: 2;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .slide-button:hover {
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    .slide-prev {
-      left: 20px;
-    }
-
-    .slide-next {
-      right: 20px;
-    }
-
-
-    @media only screen and (max-width: 768px) {
-      .slide-container {
-        height: 40vh;
-      }
-
-      .slide-button {
-        padding: 0.5rem;
-        width: 36px;
-        height: 36px;
-      }
-    }
-
-    /* Preload para melhor performance */
-    .preload {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="autoslide.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <section class="section hero v3">
-    <div style="
+    <div class="slider-wrapper">
+      <div style="
           opacity: 1;
           border-radius: 24px;
           margin-left: auto;
@@ -107,32 +22,33 @@
           overflow: hidden;
           max-width: 900px;
         ">
-      <div style="
+        <div style="
         background-color: #101223;
         width: 100%;
         height: 100%;
         position: relative;
           ">
-        <div>
-          <!-- Galeria de imagens -->
-          <div class="slide-container" aria-label="Galeria de imagens">
-            <button class="slide-button slide-prev" aria-label="Imagem anterior">
-              &lt;
-            </button>
-            <!-- Title and Subtitle -->
-            <div
-              style="z-index: 1000; text-align: center; color: white; position: absolute; top: 50%; left: 30%; transform: translate(-50%, -50%);">
-              <h1 style="margin: 0;">Handyman Services</h1>
-              <h2 style="margin: 0;">Professional and Reliable</h2>
+          <div>
+            <!-- Galeria de imagens -->
+            <div class="slide-container" aria-label="Galeria de imagens">
+              <button class="slide-button slide-prev" aria-label="Imagem anterior">
+                &lt;
+              </button>
+              <!-- Title and Subtitle -->
+              <div
+                style="z-index: 1000; text-align: center; color: white; position: absolute; top: 50%; left: 30%; transform: translate(-50%, -50%);">
+                <h1 style="margin: 0;">Handyman Services</h1>
+                <p style="margin: 0;">Professional and Reliable</p>
+              </div>
+              <div id="slide" class="slide" role="img" aria-label="Imagem do slideshow"></div>
+              <button class="slide-button slide-next" aria-label="Próxima imagem">
+                &gt;
+              </button>
+              <div class="slide-controls" role="tablist"></div>
             </div>
-            <div id="slide" class="slide" role="img" aria-label="Imagem do slideshow"></div>
-            <button class="slide-button slide-next" aria-label="Próxima imagem">
-              &gt;
-            </button>
-            <div class="slide-controls" role="tablist"></div>
+            <!-- Fim da galeria de imagens -->
+            <div class="inner---section-bg-shadow black v1"></div>
           </div>
-          <!-- Fim da galeria de imagens -->
-          <div class="inner---section-bg-shadow black v1"></div>
         </div>
       </div>
     </div>
@@ -140,122 +56,8 @@
 
   <!-- Div para preload das imagens -->
   <div class="preload" aria-hidden="true"></div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const images = [
-        "/assets/slide/slide1.webp",
-        "/assets/slide/slide2.webp",
-        "/assets/slide/slide3.webp",
-        "/assets/slide/slide4.webp",
-        "/assets/slide/slide5.webp",
-      ];
-
-      const slideElement = document.getElementById("slide");
-      const container = document.querySelector(".slide-container");
-      const controls = document.querySelector(".slide-controls");
-      let currentIndex = 0;
-      let intervalId;
-      let touchStartX = 0;
-
-      // Preload images
-      function preloadImages() {
-        const preloadDiv = document.querySelector(".preload");
-        images.forEach((src) => {
-          const img = new Image();
-          img.src = src;
-          preloadDiv.appendChild(img);
-        });
-      }
-
-      // Create dot controls
-      function createDots() {
-        images.forEach((_, index) => {
-          const dot = document.createElement("button");
-          dot.className = `slide-dot${index === 0 ? " active" : ""}`;
-          dot.setAttribute("role", "tab");
-          dot.setAttribute("aria-label", `Slide ${index + 1}`);
-          dot.onclick = () => goToSlide(index);
-          controls.appendChild(dot);
-        });
-      }
-
-      function updateDots() {
-        const dots = controls.getElementsByClassName("slide-dot");
-        Array.from(dots).forEach((dot, index) => {
-          dot.classList.toggle("active", index === currentIndex);
-        });
-      }
-
-      function goToSlide(index) {
-        currentIndex = index;
-        updateSlide();
-        resetInterval();
-      }
-
-      function updateSlide() {
-        slideElement.style.backgroundImage = `url(${images[currentIndex]})`;
-        slideElement.setAttribute(
-          "aria-label",
-          `Imagem ${currentIndex + 1} de ${images.length}`
-        );
-        updateDots();
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateSlide();
-        resetInterval();
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateSlide();
-        resetInterval();
-      }
-
-      function resetInterval() {
-        clearInterval(intervalId);
-        intervalId = setInterval(nextSlide, 3000);
-      }
-
-      // Touch events for mobile
-      container.addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].clientX;
-      });
-
-      container.addEventListener("touchend", (e) => {
-        const touchEndX = e.changedTouches[0].clientX;
-        const diff = touchStartX - touchEndX;
-
-        if (Math.abs(diff) > 50) {
-          // Minimum swipe distance
-          if (diff > 0) {
-            nextSlide();
-          } else {
-            prevSlide();
-          }
-        }
-      });
-
-      // Keyboard navigation
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowLeft") {
-          prevSlide();
-        } else if (e.key === "ArrowRight") {
-          nextSlide();
-        }
-      });
-
-      // Initialize
-      document.querySelector(".slide-prev").onclick = prevSlide;
-      document.querySelector(".slide-next").onclick = nextSlide;
-      createDots();
-      preloadImages();
-      updateSlide();
-      resetInterval();
-    });
-  </script>
+  <!--link para script-->
+  <script src="autoslide.js"></script>
 </body>
 
 </html>
