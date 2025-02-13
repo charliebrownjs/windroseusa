@@ -507,38 +507,38 @@
               class="w-layout-hflex flex-horizontal"
             >
               <div class="slide-container">
-                <div class="slide-about">
-                  <img
-                    src="/assets/slide/about/autoslide1.webp"
-                    alt="Handyman Service 1"
-                  />
-                </div>
-                <div class="slide-about">
-                  <img
-                    src="/assets/slide/about/autoslide2.webp"
-                    alt="Handyman Service 2"
-                  />
-                </div>
-                <div class="slide-about">
-                  <img
-                    src="/assets/slide/about/autoslide3.webp"
-                    alt="Handyman Service 3"
-                  />
-                </div>
-                <div class="slide-about"></div>
-                <div class="slide-about">
-                  <img
-                    src="/assets/slide/about/autoslide4.webp"
-                    alt="Handyman Service 4"
-                  />
-                </div>
-                <div class="slide-about">
-                  <img
-                    src="/assets/slide/about/autoslide5.webp"
-                    alt="Handyman Service 5"
-                  />
-                </div>
-                <div class="slide-about">
+              <div class="slide-about">
+                <img
+                src="/assets/slide/about/autoslide1.webp"
+                alt="Handyman Service 1"
+                />
+              </div>
+              <div class="slide-about">
+                <img
+                src="/assets/slide/about/autoslide2.webp"
+                alt="Handyman Service 2"
+                />
+              </div>
+              <div class="slide-about">
+                <img
+                src="/assets/slide/about/autoslide3.webp"
+                alt="Handyman Service 3"
+                />
+              </div>
+              <div class="slide-about"></div>
+              <div class="slide-about">
+                <img
+                src="/assets/slide/about/autoslide4.webp"
+                alt="Handyman Service 4"
+                />
+              </div>
+              <div class="slide-about">
+                <img
+                src="/assets/slide/about/autoslide5.webp"
+                alt="Handyman Service 5"
+                />
+              </div>
+              <div class="slide-about">
                   <img
                     src="/assets/slide/about/autoslide6.webp"
                     alt="Handyman Service 6"
@@ -637,34 +637,55 @@
                   overflow-x: auto;
                   scroll-snap-type: x mandatory;
                   scroll-behavior: smooth;
+                  -webkit-overflow-scrolling: touch;
+                  padding: 16px;
+                  gap: 16px;
                 }
                 .slide-about {
                   flex: none;
-                  scroll-snap-align: start;
-                  padding: 24px;
+                  scroll-snap-align: center;
+                  padding: 16px;
+                  border-radius: 8px;
+                  transition: transform 0.3s ease-in-out;
                 }
                 .slide-about img {
                   width: auto;
                   height: 320px;
+                  border-radius: 8px;
                 }
-              </style>
+                .slide-about:hover {
+                  transform: scale(1.05);
+                }
+                </style>
             </div>
 
             <script>
               document.addEventListener("DOMContentLoaded", function () {
-                const slideContainer =
-                  document.querySelector(".slide-container");
+                const slideContainer = document.querySelector(".slide-container");
                 let scrollAmount = 0;
-                const slideInterval = setInterval(function () {
-                  scrollAmount += slideContainer.clientWidth;
-                  if (scrollAmount >= slideContainer.scrollWidth) {
-                    scrollAmount = 0;
-                  }
-                  slideContainer.scrollTo({
-                    left: scrollAmount,
-                    behavior: "smooth",
-                  });
-                }, 3000);
+                let slideInterval;
+
+                function startSlideShow() {
+                  slideInterval = setInterval(function () {
+                    scrollAmount += slideContainer.clientWidth;
+                    if (scrollAmount >= slideContainer.scrollWidth) {
+                      scrollAmount = 0;
+                    }
+                    slideContainer.scrollTo({
+                      left: scrollAmount,
+                      behavior: "smooth",
+                    });
+                  }, 3000);
+                }
+
+                function stopSlideShow() {
+                  clearInterval(slideInterval);
+                }
+
+                slideContainer.addEventListener("mouseenter", stopSlideShow);
+                slideContainer.addEventListener("mouseleave", startSlideShow);
+
+                startSlideShow();
               });
             </script>
             <!-- slide -->
