@@ -260,7 +260,7 @@ html.w-mod-touch * {
 
 .badblock {
   background-color: #fff;
-  height: 320px;
+  height: 280px;
   width: 100%;
   position: absolute;
   z-index: 1000;
