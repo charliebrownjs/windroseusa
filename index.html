@@ -495,19 +495,13 @@
                   data-aos="fade-up"
                   data-aos-delay="300"
                   class="btn-secondary align-self-bottom center---tablet w-button"
-                  >Book Online<span
-                    class="line-rounded-icon link-icon-right"
-                    style="
-                      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
-                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-                        skew(0deg, 0deg);
-                      transform-style: preserve-3d;
-                    "
+                  >Book Online<span class="line-rounded-icon link-icon-right"
                     ></span
                   >
                 </a>
               </div>
             </div>
+            <!-- container slide -->
             <div
               style="background-color: #fff"
               class="w-layout-hflex flex-horizontal"
@@ -515,33 +509,124 @@
               <div class="slide-container">
                 <div class="slide-about">
                   <img
-                    src="/assets/slide/mslide1.webp"
+                    src="/assets/slide/about/autoslide1.webp"
                     alt="Handyman Service 1"
                   />
                 </div>
                 <div class="slide-about">
                   <img
-                    src="/assets/slide/mslide2.webp"
+                    src="/assets/slide/about/autoslide2.webp"
                     alt="Handyman Service 2"
                   />
                 </div>
                 <div class="slide-about">
                   <img
-                    src="/assets/slide/mslide3.webp"
+                    src="/assets/slide/about/autoslide3.webp"
                     alt="Handyman Service 3"
                   />
                 </div>
                 <div class="slide-about"></div>
                 <div class="slide-about">
                   <img
-                    src="/assets/slide/mslide4.webp"
+                    src="/assets/slide/about/autoslide4.webp"
                     alt="Handyman Service 4"
                   />
                 </div>
                 <div class="slide-about">
                   <img
-                    src="/assets/slide/mslide5.webp"
+                    src="/assets/slide/about/autoslide5.webp"
                     alt="Handyman Service 5"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide6.webp"
+                    alt="Handyman Service 6"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide7.webp"
+                    alt="Handyman Service 7"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide8.webp"
+                    alt="Handyman Service 8"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide9.webp"
+                    alt="Handyman Service 9"
+                  />
+                </div>
+                <!-- add more 10 slides -->
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide10.webp"
+                    alt="Handyman Service 10"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide11.webp"
+                    alt="Handyman Service 11"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide12.webp"
+                    alt="Handyman Service 12"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide13.webp"
+                    alt="Handyman Service 13"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide14.webp"
+                    alt="Handyman Service 14"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide15.webp"
+                    alt="Handyman Service 15"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide16.webp"
+                    alt="Handyman Service 16"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide17.webp"
+                    alt="Handyman Service 17"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide18.webp"
+                    alt="Handyman Service 18"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide19.webp"
+                    alt="Handyman Service 19"
+                  />
+                </div>
+                <div class="slide-about">
+                  <img
+                    src="/assets/slide/about/autoslide20.webp"
+                    alt="Handyman Service 20"
                   />
                 </div>
               </div>
@@ -551,6 +636,7 @@
                   display: flex;
                   overflow-x: auto;
                   scroll-snap-type: x mandatory;
+                  scroll-behavior: smooth;
                 }
                 .slide-about {
                   flex: none;
@@ -563,10 +649,29 @@
                 }
               </style>
             </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const slideContainer =
+                  document.querySelector(".slide-container");
+                let scrollAmount = 0;
+                const slideInterval = setInterval(function () {
+                  scrollAmount += slideContainer.clientWidth;
+                  if (scrollAmount >= slideContainer.scrollWidth) {
+                    scrollAmount = 0;
+                  }
+                  slideContainer.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth",
+                  });
+                }, 3000);
+              });
+            </script>
+            <!-- slide -->
           </div>
         </div>
       </section>
-     <!-- section about -->
+      <!-- section about -->
       <section id="process"></section>
       <section
         style="position: relative; background-color: #fff"
