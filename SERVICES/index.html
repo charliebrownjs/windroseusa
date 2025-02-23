@@ -1,161 +1,730 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Before/After Comparison</title>
+    <link rel="stylesheet" href="../styles.css" />
     <style>
-        body {
-            height: 300vh;
-            background-color: #111;
-            color: white;
-            overflow-x: hidden;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+      body {
+        height: 300vh;
+        background-color: #111;
+        color: white;
+        overflow-x: hidden;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
 
-        h1, h2 {
-            font-weight: 400;
-            max-width: none;
-        }
+      h1,
+      h2 {
+        font-weight: 400;
+        max-width: none;
+      }
 
-        .panel {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 90vh;
-        }
+      .panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+      }
 
-        .comparisonSection {
-            position: relative;
-            padding-bottom: 56.25%;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+      .comparisonSection {
+        position: relative;
+        padding-bottom: 56.25%;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-        .comparisonImage {
-            width: 100%;
-            height: 100%;
-        }
+      .comparisonImage {
+        width: 100%;
+        height: 100%;
+      }
 
-        .afterImage {
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            transform: translate(100%, 0px);
-        }
+      .afterImage {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        transform: translate(100%, 0px);
+      }
 
-        .afterImage img {
-            transform: translate(-100%, 0px);
-        }
+      .afterImage img {
+        transform: translate(-100%, 0px);
+      }
 
-        .comparisonImage img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            object-fit: cover;
-        }
+      .comparisonImage img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+      }
 
-        .header-section {
-            font-size: 2.5rem;
-            text-align: center;
-            margin: 0;
-            opacity: 0;
-            transform: translateY(30px);
-        }
+      .header-section {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(30px);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <section id="header">
+        <script
+          type="text/javascript"
+          src="/___vscode_livepreview_injected_script"
+        ></script>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Header</title>
+        <!-- Importação do Tailwind CSS -->
+        <link href="/components/styles.css" rel="stylesheet" />
+
+        <div class="header-wrapper header-top w-nav">
+          <div class="container-default w-container">
+            <div class="header-top-wrapper">
+              <div class="flex-horizontal space-between gap-16px">
+                <div class="header-contact-info">
+                  <a
+                    href="mailto:help@windroseusa.com"
+                    class="link color-neutral-600 center w-inline-block"
+                    ><div class="inline-block mg-right-8px">
+                      <div class="handyman-icon-font color-accent-1">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                          ></path>
+                          <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="inline-block">help@windroseusa.com</div></a
+                  >
+                  <div class="color-neutral-600 tablet_view">
+                    <div class="inline-block mg-right-8px">
+                      <div
+                        class="line-rounded-icon font-size-20px color-accent-1"
+                      >
+                        
+                      </div>
+                    </div>
+                    <div class="inline-block">Miami to West Palm Beach, FL</div>
+                  </div>
+                </div>
+                <div class="w-layout-hflex social-media-flex">
+                  <a
+                    href="https://www.facebook.com/windrosenetworkandsolutions"
+                    target="_blank"
+                    class="social-icon-square w-inline-block"
+                    ><div class="social-icon-font">
+                      <svg
+                        fill="#4b5050"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.0"
+                        x="0px"
+                        y="0px"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 50 50"
+                        class="icon icons8-Facebook-Filled"
+                      >
+                        <path
+                          d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"
+                        ></path>
+                      </svg></div></a
+                  ><a
+                    href="https://www.instagram.com/windroseusa/"
+                    target="_blank"
+                    class="social-icon-square w-inline-block"
+                    ><div class="social-icon-font">
+                      <svg
+                        id="instagram"
+                        fill="#4b5050"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px"
+                        y="0px"
+                        width="20px"
+                        height="20px"
+                        viewBox="0 0 169.063 169.063"
+                        style="enable-background: new 0 0 169.063 169.063"
+                        xml:space="preserve"
+                      >
+                        <g>
+                          <path
+                            d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+                                                                        c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
+                                                                        c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
+                                                                        c17.455,0,31.656,14.201,31.656,31.655V122.407z"
+                          ></path>
+                          <path
+                            d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+                                                                        C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
+                                                                        c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
+                          ></path>
+                          <path
+                            d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+                                                                        c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
+                                                                        C135.661,29.421,132.821,28.251,129.921,28.251z"
+                          ></path>
+                        </g>
+                      </svg></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-content-wrapper header-top">
+              <div class="header-left-side flex-growth-tablet">
+                <a
+                  href="/"
+                  aria-current="page"
+                  class="header-logo-link w-nav-brand w--current"
+                  aria-label="home"
+                  ><img
+                    src="https://charliebrownjs.github.io/windroseusa/assets/WindroseUSA_logo_original.png"
+                    alt="Logo - WindroseUSA"
+                    class="header-logo"
+                /></a>
+                <nav
+                  role="navigation"
+                  class="header-nav-menu-wrapper w-nav-menu"
+                >
+                  <ul role="list" class="header-nav-menu-list tablet_view">
+                    <li class="header-nav-list-item">
+                      <a
+                        href="#"
+                        class="header-nav-link w-nav-link"
+                        style="max-width: 1268px"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="header-nav-list-item">
+                      <a
+                        href="#About-Section"
+                        class="header-nav-link w-nav-link"
+                        style="max-width: 1268px"
+                        >About</a
+                      >
+                    </li>
+                    <li class="header-nav-list-item">
+                      <a
+                        href="#Services-Section"
+                        class="header-nav-link w-nav-link"
+                        style="max-width: 1268px"
+                        >Services</a
+                      >
+                    </li>
+                    <li class="header-nav-list-item show-in-tablet header-btn">
+                      <a href="#" class="btn-primary small width-100 w-button"
+                        >Book Online<span
+                          class="line-rounded-icon link-icon-right"
+                          ></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <div class="mg-left-auto-tablet"></div>
+              </div>
+              <div class="header-right-side">
+                <div>
+                  <div class="badge-top-wrapper">
+                    <div class="font-size-24px color-secondary-1"></div>
+                    <a href="tel:5088187518">
+                      <div class="badge-top line-rounded-icon">
+                         (508) 818-7518
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-nav-overlay" data-wf-ignore=""></div>
+        </div>
+      </section>
+      <section style="background-color: #fff" class="section pd-0px">
+        <div class="inner---section big-size inner-section-services">
+          <div class="half-bg-top half-bg-why-us">
+            <div class="bg-floating why-us"></div>
+          </div>
+          <div class="container-default">
+            <div>
+              <div class="mg-bottom-40px">
+                <div class="w-layout-vflex flex-vertical center text-center">
+                  <div id="Services-Section" class="badge-top-wrapper">
+                    <div class="badge-top">Services</div>
+                  </div>
+                  <div class="inner-container _402px center">
+                    <div class="inner-container _350px---tablet center">
+                      <div class="inner-container _250px---mbl">
+                        <h2 class="heading-h2-size extra-bold mg-bottom-4px">
+                          Most Popular
+                          <span class="text-no-wrap">Services</span>
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inner-container _504px center">
+                    <div class="inner-container _450px---mbl">
+                      <p class="mg-bottom-0">
+                        Services available for a minimum of 2 hours.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <!-- sixth tab -->
+                <div class="mg-top-40px">
+                  <div class="w-layout-hflex flex-horizontal">
+                    <a
+                      href="https://app.windroseusa.com"
+                      class="btn-primary w-button"
+                      >Book Online<span
+                        class="line-rounded-icon link-icon-right"
+                        ></span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- container -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Before/After Comparison -->
+
     <section class="panel">
-        <h1 class="header-section">Scroll to see the before/after</h1>
+      <h1 class="header-section">Scroll to see the before/after</h1>
     </section>
 
     <section class="comparisonSection">
-        <div class="comparisonImage beforeImage">
-            <img src="./assets/playground-1-before.webp" alt="before">
-        </div>
-        <div class="comparisonImage afterImage">
-            <img src="./assets/playground-1-after.webp" alt="after">
-        </div>
+      <div class="comparisonImage beforeImage">
+        <img src="./assets/playground-1-before.webp" alt="before" />
+      </div>
+      <div class="comparisonImage afterImage">
+        <img src="./assets/playground-1-after.webp" alt="after" />
+      </div>
     </section>
 
     <section class="panel">
-        <h1 class="header-section">Scroll to see the before/after</h1>
+      <h1 class="header-section">Scroll to see the before/after</h1>
     </section>
 
     <section class="comparisonSection">
-        <div class="comparisonImage beforeImage">
-            <img src="./assets/bed-1-before.webp" alt="before">
-        </div>
-        <div class="comparisonImage afterImage">
-            <img src="./assets/bed-1-after.webp" alt="after">
-        </div>
+      <div class="comparisonImage beforeImage">
+        <img src="./assets/bed-1-before.webp" alt="before" />
+      </div>
+      <div class="comparisonImage afterImage">
+        <img src="./assets/bed-1-after.webp" alt="after" />
+      </div>
     </section>
 
     <section class="panel">
-        <h1 class="header-section">Scroll to see the before/after</h1>
+      <h1 class="header-section">Scroll to see the before/after</h1>
     </section>
 
     <section class="comparisonSection">
-        <div class="comparisonImage beforeImage">
-            <img src="./assets/bbq-1-before.webp" alt="before">
-        </div>
-        <div class="comparisonImage afterImage">
-            <img src="./assets/bbq-1-after.webp" alt="after">
-        </div>
+      <div class="comparisonImage beforeImage">
+        <img src="./assets/bbq-1-before.webp" alt="before" />
+      </div>
+      <div class="comparisonImage afterImage">
+        <img src="./assets/bbq-1-after.webp" alt="after" />
+      </div>
     </section>
 
     <section class="panel">
-        <h1 class="header-section">Scroll to see the before/after</h1>
+      <h1 class="header-section">Scroll to see the before/after</h1>
     </section>
 
     <section class="comparisonSection">
-        <div class="comparisonImage beforeImage">
-            <img src="./assets/shoe-storage-1-before.webp" alt="before">
-        </div>
-        <div class="comparisonImage afterImage">
-            <img src="./assets/shoe-storage-1-after.webp" alt="after">
-        </div>
+      <div class="comparisonImage beforeImage">
+        <img src="./assets/shoe-storage-1-before.webp" alt="before" />
+      </div>
+      <div class="comparisonImage afterImage">
+        <img src="./assets/shoe-storage-1-after.webp" alt="after" />
+      </div>
     </section>
-    
+
+    <section class="panel">
+      <h1 class="header-section">Enjoy</h1>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer id="footer">
+      <script
+        type="text/javascript"
+        src="/___vscode_livepreview_injected_script"
+      ></script>
+      <meta charset="UTF-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
+      <title>Footer Component</title>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <style>
+        :root {
+          --btn-ra-width: 250px;
+          --btn-ra-height: 80px;
+          --btn-ra-color: #101223;
+          --btn-ra-color-dark: #ffce51;
+          --btn-ra-color-tint: #fff;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        .centerer {
+          width: 50%;
+          max-width: 600px;
+          margin-left: 0;
+          margin-right: auto;
+          padding: 0 0rem;
+        }
+
+        .centerer-flex {
+          display: flex;
+          justify-content: start;
+          align-items: start;
+        }
+
+        .btn-ra-footer {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          max-width: var(--btn-ra-width);
+          height: var(--btn-ra-height);
+          margin: 1rem auto;
+          text-align: center;
+          border: 1px solid currentColor;
+          color: var(--btn-ra-color);
+          border-radius: 16px;
+          line-height: var(--btn-ra-height);
+        }
+
+        .btn-ra-footer span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background-color: var(--btn-ra-color);
+          transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+
+        .btn-ra-footer:hover {
+          color: var(--btn-ra-color-tint);
+          border-color: var(--btn-ra-color-dark);
+        }
+
+        .btn-ra-footer:hover span {
+          width: 225%;
+          height: calc(var(--btn-ra-width) * 2.25);
+        }
+
+        .btn-ra-footer:active {
+          background-color: var(--btn-ra-color);
+        }
+      </style>
+
+      <!-- Footer -->
+      <div class="page-wrapper">
+        <!-- page wrapper -->
+        <div class="footer-container">
+          <footer class="footer-wrapper overflow-hidden-mbp">
+            <div class="cta-footer-wrapper">
+              <div data-aos="zoom-in" class="cta-footer aos-init">
+                <div class="w-layout-grid grid-2-columns cta-footer-grid-2-col">
+                  <div class="inner-container _468px _100-tablet">
+                    <div class="inner-container _350px---mbl center">
+                      <h2 class="heading-h2-size extra-bold mg-bottom-0">
+                        Let us work <br />for you today!
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="buttons-row right center---tablet">
+                    <a
+                      class="btn-ra-footer"
+                      href="https://app.windroseusa.com"
+                      target="_blank"
+                      >Book online<span
+                        style="top: -1246.04px; left: 149.685px"
+                      ></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inner---section big-size footer" style="opacity: 1">
+              <div
+                class="w-layout-blockcontainer container-default position-relative w-container"
+              >
+                <div class="shape-wrapper footer-shape">
+                  <img
+                    src="https://charliebrownjs.github.io/windroseusa/assets/wrusa-background.jpg"
+                    alt=""
+                    class="shape footer-shape"
+                    style="opacity: 0.2"
+                  />
+                </div>
+                <div class="z-index-1">
+                  <div class="mg-bottom-54px">
+                    <div
+                      class="w-layout-grid grid-3-columns menu-grid-3-col-wrapper"
+                    >
+                      <div class="inner-container _356px _100-tablet">
+                        <div class="inline-block mg-bottom-24px">
+                          <div class="heading-h3-size color-secondary-3">
+                            Menu
+                          </div>
+                        </div>
+                        <div
+                          class="w-layout-grid grid-2-columns menu-subgrid-2-col footer"
+                        >
+                          <div>
+                            <ul role="list" class="menu-list-wrapper">
+                              <li class="menu-list-item">
+                                <a href="#header" class="link color-neutral-300"
+                                  >Home (Sales)</a
+                                >
+                              </li>
+                              <li class="menu-list-item">
+                                <a href="#header" class="link color-neutral-300"
+                                  >Home
+                                </a>
+                              </li>
+                              <li class="menu-list-item">
+                                <a href="#" class="link color-neutral-300"
+                                  >About us</a
+                                >
+                              </li>
+                              <li class="menu-list-item">
+                                <a href="#" class="link color-neutral-300"
+                                  >Services</a
+                                >
+                              </li>
+                              <li class="menu-list-item">
+                                <a href="#" class="link color-neutral-300"
+                                  >Our Process</a
+                                >
+                              </li>
+                              <li class="menu-list-item">
+                                <a href="#" class="link color-neutral-300"
+                                  >Contact
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="inner-container _200px _100-mbp">
+                          <div class="inline-block mg-bottom-24px">
+                            <div class="heading-h3-size color-secondary-3">
+                              Services
+                            </div>
+                          </div>
+                          <ul role="list" class="menu-list-wrapper">
+                            <li class="menu-list-item">
+                              <a href="#" class="link color-neutral-300"
+                                >Computer Help</a
+                              >
+                            </li>
+                            <li class="menu-list-item">
+                              <a href="#" class="link color-neutral-300"
+                                >Decoration</a
+                              >
+                            </li>
+                            <li class="menu-list-item">
+                              <a href="#" class="link color-neutral-300"
+                                >Full Service Help Moving</a
+                              >
+                            </li>
+                            <li class="menu-list-item">
+                              <a href="#" class="link color-neutral-300"
+                                >Furniture Assembly</a
+                              >
+                            </li>
+                            <li class="menu-list-item">
+                              <a href="#" class="link color-neutral-300"
+                                >Help Moving</a
+                              >
+                            </li>
+                            <li class="menu-list-item">
+                              <a href="#" class="link color-neutral-300"
+                                >Smart Home Installation</a
+                              >
+                            </li>
+                            <!-- <li class="menu-list-item"><a href="#"
+                                                                class="link color-neutral-300">Truck
+                                                                Assisted Help Moving</a></li> -->
+                            <li class="menu-list-item">
+                              <a href="#" class="link color-neutral-300"
+                                >Fitness Equipment Assembly</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="inline-block mg-bottom-24px">
+                          <div class="heading-h3-size color-secondary-3">
+                            Contact Us
+                          </div>
+                        </div>
+                        <div>
+                          <div class="mg-bottom-48px">
+                            <div class="mg-bottom-8px">
+                              <div class="text-200 color-neutral-100">
+                                Phone
+                              </div>
+                            </div>
+                            <div class="display-4">
+                              <a
+                                href="tel:508-818-7518"
+                                class="link bold color-neutral-100"
+                                >(+1) 508-818-7518</a
+                              >
+                            </div>
+                          </div>
+                          <div>
+                            <div class="mg-bottom-8px">
+                              <div class="text-200 color-neutral-100">
+                                Email
+                              </div>
+                            </div>
+                            <div class="display-4">
+                              <a
+                                href="mailto:help@windroseusa.com"
+                                class="link bold color-neutral-100"
+                                >help@windroseusa.com</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex-horizontal footer-bottom-flex"
+                    style="opacity: 1"
+                  >
+                    <a href="#" class="footer-logo-wrapper w-inline-block"
+                      ><img
+                        src="https://charliebrownjs.github.io/windroseusa/assets/WindroseUSA_logo_Transparent.png"
+                        class="footer-logo"
+                    /></a>
+                    <div class="color-neutral-100">
+                      <p class="text-100 mg-bottom-0">
+                        Copyright ₢ 2024 ©
+                        <a
+                          href="https://dxbr.cloud"
+                          target="_blank"
+                          class="link color-neutral-100"
+                          >WindroseUSA</a
+                        >
+                        | All Rights Reserved
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <!-- End Footer -->
+      <!-- animated button -->
+      <script>
+        $(function () {
+          $(".btn-ra-footer")
+            .on("mouseenter", function (e) {
+              var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+              $(this).find("span").css({ top: relY, left: relX });
+            })
+            .on("mouseout", function (e) {
+              var parentOffset = $(this).offset(),
+                relX = e.pageX - parentOffset.left,
+                relY = e.pageY - parentOffset.top;
+              $(this).find("span").css({ top: relY, left: relX });
+            });
+        });
+      </script>
+      <!-- Importação do AOS -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+      gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to('.header-section', {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: 'power3.out'
+      gsap.to(".header-section", {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+      });
+
+      gsap.utils.toArray(".comparisonSection").forEach((section) => {
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: "center center",
+            end: () => "+=" + section.offsetWidth,
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+          },
+          defaults: { ease: "none" },
         });
 
-        gsap.utils.toArray(".comparisonSection").forEach(section => {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "center center",
-                    end: () => "+=" + section.offsetWidth,
-                    scrub: true,
-                    pin: true,
-                    anticipatePin: 1
-                },
-                defaults: {ease: "none"}
-            });
-
-            tl.fromTo(section.querySelector(".afterImage"), 
-                { xPercent: 100, x: 0 }, 
-                { xPercent: 0 }
-            )
-            .fromTo(section.querySelector(".afterImage img"), 
-                { xPercent: -100, x: 0 }, 
-                { xPercent: 0 }, 
-                0
-            );
-        });
+        tl.fromTo(
+          section.querySelector(".afterImage"),
+          { xPercent: 100, x: 0 },
+          { xPercent: 0 }
+        ).fromTo(
+          section.querySelector(".afterImage img"),
+          { xPercent: -100, x: 0 },
+          { xPercent: 0 },
+          0
+        );
+      });
     </script>
-</body>
+  </body>
 </html>
