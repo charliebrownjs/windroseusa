@@ -352,12 +352,18 @@
     <!-- card section -->
 
     <section class="comparisonSection">
-      <div class="comparisonImage beforeImage">
-        <img src="./assets/playground-1-before.webp" alt="before" />
-      </div>
-      <div class="comparisonImage afterImage">
-        <img src="./assets/playground-1-after.webp" alt="after" />
-      </div>
+        <div class="comparisonImage beforeImage">
+            <picture>
+                <source srcset="./assets/responsive/playground-1-before-responsive.webp" media="(max-width: 476px)">
+                <img src="./assets/playground-1-before.webp" alt="before" />
+            </picture>
+        </div>
+        <div class="comparisonImage afterImage">
+            <picture>
+                <source srcset="./assets/responsive/playground-1-after-responsive.webp" media="(max-width: 476px)">
+                <img src="./assets/playground-1-after.webp" alt="after" />
+            </picture>
+        </div>
     </section>
 
     <!-- card section -->
