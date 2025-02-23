@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Slideshow - WindRose USA">
+    <title>Modern Slideshow</title>
+    <style>
+        .slider {
+            --slide-transition: 400ms ease-out;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .slider__container {
+            position: relative;
+            height: 500px;
+            background-color: #101223;
+        }
+
+        .slider__slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity var(--slide-transition);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider__slide.active {
+            opacity: 1;
+        }
+
+        .slider__content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .slider__title {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .slider__subtitle {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s 0.2s, transform 0.6s 0.2s;
+        }
+
+        .active .slider__title,
+        .active .slider__subtitle {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slider__controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .slider__dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 0;
+        }
+
+        .slider__dot.active {
+            background: #fff;
+        }
+
+        .slider__button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 2;
+            transition: background-color 0.3s;
+        }
+
+        .slider__button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .slider__button--prev {
+            left: 20px;
+        }
+
+        .slider__button--next {
+            right: 20px;
+        }
+
+        .preload {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider" id="mainSlider">
+        <div class="slider__container">
+            <button class="slider__button slider__button--prev" aria-label="Previous slide">&lt;</button>
+            <button class="slider__button slider__button--next" aria-label="Next slide">&gt;</button>
+            
+            <div class="slider__content">
+                <h1 class="slider__title"></h1>
+                <p class="slider__subtitle"></p>
+            </div>
+
+            <div class="slider__slides"></div>
+            <div class="slider__controls" role="tablist"></div>
+        </div>
+    </div>
+    <div class="preload" aria-hidden="true"></div>
+
+    <script>
+        class Slider {
+            constructor(element, config) {
+                this.element = element;
+                this.config = config;
+                this.currentIndex = 0;
+                this.isTransitioning = false;
+                this.intervalId = null;
+                this.touchStartX = 0;
+                this.isPaused = false;
+
+                this.init();
+            }
+
+            init() {
+                this.createSlides();
+                this.createDots();
+                this.setupEventListeners();
+                this.showSlide(0);
+                this.startAutoPlay();
+            }
+
+            createSlides() {
+                const slidesContainer = this.element.querySelector('.slider__slides');
+                
+                this.config.images.forEach((src, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'slider__slide';
+                    slide.style.backgroundImage = `url(${src})`;
+                    slidesContainer.appendChild(slide);
+                });
+
+                this.slides = Array.from(slidesContainer.children);
+            }
+
+            createDots() {
+                const controls = this.element.querySelector('.slider__controls');
+                
+                this.config.images.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'slider__dot';
+                    dot.setAttribute('aria-label', `Slide ${index + 1}`);
+                    controls.appendChild(dot);
+                });
+
+                this.dots = Array.from(controls.children);
+            }
+
+            setupEventListeners() {
+                this.element.querySelector('.slider__button--prev').onclick = () => this.prevSlide();
+                this.element.querySelector('.slider__button--next').onclick = () => this.nextSlide();
+
+                this.dots.forEach((dot, index) => {
+                    dot.onclick = () => this.goToSlide(index);
+                });
+
+                this.element.ontouchstart = (e) => this.handleTouchStart(e);
+                this.element.ontouchend = (e) => this.handleTouchEnd(e);
+
+                this.element.onmouseenter = () => this.pause();
+                this.element.onmouseleave = () => this.resume();
+
+                document.onkeydown = (e) => this.handleKeydown(e);
+            }
+
+            showSlide(index) {
+                if (this.isTransitioning) return;
+
+                const content = this.config.content[index];
+                const title = this.element.querySelector('.slider__title');
+                const subtitle = this.element.querySelector('.slider__subtitle');
+
+                this.slides.forEach(slide => slide.classList.remove('active'));
+                this.slides[index].classList.add('active');
+
+                this.dots.forEach(dot => dot.classList.remove('active'));
+                this.dots[index].classList.add('active');
+
+                title.textContent = content.title;
+                subtitle.textContent = content.subtitle;
+
+                this.currentIndex = index;
+            }
+
+            nextSlide() {
+                this.goToSlide((this.currentIndex + 1) % this.slides.length);
+            }
+
+            prevSlide() {
+                this.goToSlide((this.currentIndex - 1 + this.slides.length) % this.slides.length);
+            }
+
+            goToSlide(index) {
+                if (index === this.currentIndex) return;
+                
+                this.isTransitioning = true;
+                this.showSlide(index);
+                
+                setTimeout(() => {
+                    this.isTransitioning = false;
+                }, 400);
+
+                this.resetAutoPlay();
+            }
+
+            handleTouchStart(e) {
+                this.touchStartX = e.touches[0].clientX;
+            }
+
+            handleTouchEnd(e) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const diff = this.touchStartX - touchEndX;
+
+                if (Math.abs(diff) > 50) {
+                    diff > 0 ? this.nextSlide() : this.prevSlide();
+                }
+            }
+
+            handleKeydown(e) {
+                if (e.key === 'ArrowLeft') {
+                    this.prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    this.nextSlide();
+                }
+            }
+
+            startAutoPlay() {
+                this.intervalId = setInterval(() => {
+                    if (!this.isPaused) {
+                        this.nextSlide();
+                    }
+                }, this.config.interval);
+            }
+
+            resetAutoPlay() {
+                clearInterval(this.intervalId);
+                this.startAutoPlay();
+            }
+
+            pause() {
+                this.isPaused = true;
+            }
+
+            resume() {
+                this.isPaused = false;
+            }
+        }
+
+        // Initialize the slider when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderConfig = {
+                images: [
+                    "/assets/slide/slide1.webp",
+                    "/assets/slide/slide2.webp",
+                    "/assets/slide/slide3.webp",
+                    "/assets/slide/slide4.webp",
+                    "/assets/slide/slide5.webp"
+                ],
+                content: [
+                    { title: "Handyman Services", subtitle: "Professional and Reliable" },
+                    { title: "Quality Work", subtitle: "Satisfaction Guaranteed" },
+                    { title: "Expert Team", subtitle: "Years of Experience" },
+                    { title: "Home Repairs", subtitle: "All Services Available" },
+                    { title: "Best Solutions", subtitle: "For Your Home" }
+                ],
+                interval: 5000
+            };
+
+            const sliderElement = document.getElementById('mainSlider');
+            new Slider(sliderElement, sliderConfig);
+        });
+    </script>
+</body>
+</html>
