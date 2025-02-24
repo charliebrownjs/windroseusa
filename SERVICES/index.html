@@ -67,6 +67,35 @@
         opacity: 0;
         transform: translateY(30px);
       }
+      
+      /* CSS para dispositivos móveis */
+      @media (max-width: 768px) {
+        .panel {
+          min-height: 100vh;
+        }
+
+        .comparisonSection {
+          padding-bottom: 100%;
+        }
+
+        .header-section {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .header-section {
+          font-size: 3rem;
+          max-width: 320px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .header-section {
+          font-size: 1.2rem;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -368,7 +397,7 @@
 
     <!-- card section -->
     <section class="panel">
-      <h1 class="header-section">Furniture Assembly Bed</h1>
+      <h1 class="header-section">Bed Assembly</h1>
     </section>
 
     <!-- Section 2 title-->
@@ -410,7 +439,7 @@
     </section>
 
     <section class="panel">
-        <h1 class="header-section">BBQ Instalation</h1>
+        <h1 class="header-section">Barbecue Instalation</h1>
       </section>
   
       <!-- Section 3 title-->
@@ -453,7 +482,7 @@
 
     <!-- Section 4 title-->
      <section class="panel">
-        <h1 class="header-section">Shoe Storage</h1>
+        <h1 class="header-section">Shoe Storage Assembly</h1>
       </section>
   
       <!-- Section 4 title-->
