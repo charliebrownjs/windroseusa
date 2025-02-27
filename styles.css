@@ -2118,8 +2118,8 @@ textarea.w-select {
   --neutral--200: #f7f9fc;
   --button-shadow--color-2: rgba(255, 206, 81, 0.08);
   --secondary--color-1: #4b5050;
-  --accent--primary-2: #f29544;
-  --accent--primary-1: #ffce51;
+  --accent--primary-2: #ffce51;
+  --accent--primary-1: #FCB044;
   --neutral--700: #3d4249;
   --neutral--500: #9399a2;
   --system--green-400: #11845b;
@@ -2147,8 +2147,8 @@ textarea.w-select {
   --button-shadow--white-01: rgba(22, 28, 36, 0.04);
   --button-shadow--white-02: rgba(22, 28, 36, 0.06);
   --button-shadow--white-03: rgba(22, 28, 36, 0.1);
-  --linear-gradient--primary: linear-gradient(180deg, #edf173 0%, #ffce51 100%);
-  --linear-gradient--primary-reverse: linear-gradient(90deg, #edf173 0%, #ffce51 100%);
+  --linear-gradient--primary: linear-gradient(180deg, #fcb044 0%, #ffce51 100%);
+  --linear-gradient--primary-reverse: linear-gradient(90deg, #FCB044 0%, #ffce51 100%);
 
 }
 
