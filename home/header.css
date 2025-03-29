@@ -1,0 +1,109 @@
+/* Estilos personalizados para o navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    position: relative;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0d6efd;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box .form-control {
+    padding-left: 35px;
+    border-radius: 20px;
+    background-color: rgba(240, 240, 240, 0.8);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.search-box .form-control:focus {
+    background-color: white;
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.btn-light-theme {
+    background-color: transparent;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.btn-light-theme:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Efeito de transição quando o usuário rola a página */
+.navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 991.98px) {
+    .navbar .dropdown-menu {
+        border: none;
+        background-color: #f8f9fa;
+        padding-left: 1rem;
+    }
+
+    .search-box {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
